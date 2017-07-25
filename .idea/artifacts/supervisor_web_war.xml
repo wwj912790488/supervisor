@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="supervisor-web:war">
+    <output-path>$PROJECT_DIR$/web/target</output-path>
+    <root id="archive" name="supervisor-web.war">
+      <element id="artifact" artifact-name="supervisor-web:war exploded" />
+    </root>
+  </artifact>
+</component>

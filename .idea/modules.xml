@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/build-plugin/build-plugin.iml" filepath="$PROJECT_DIR$/build-plugin/build-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/supervisor.iml" filepath="$PROJECT_DIR$/supervisor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/agent/supervisor-agent.iml" filepath="$PROJECT_DIR$/agent/supervisor-agent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cluster-sdk/supervisor-cluster-sdk.iml" filepath="$PROJECT_DIR$/cluster-sdk/supervisor-cluster-sdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/supervisor-common.iml" filepath="$PROJECT_DIR$/common/supervisor-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/content-detect/supervisor-content-detect.iml" filepath="$PROJECT_DIR$/content-detect/supervisor-content-detect.iml" />
+      <module fileurl="file://$PROJECT_DIR$/model/supervisor-model.iml" filepath="$PROJECT_DIR$/model/supervisor-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tmservice/supervisor-tmservice.iml" filepath="$PROJECT_DIR$/tmservice/supervisor-tmservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/transcoder/supervisor-transcoder.iml" filepath="$PROJECT_DIR$/transcoder/supervisor-transcoder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/utils/supervisor-utils.iml" filepath="$PROJECT_DIR$/utils/supervisor-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web/supervisor-web.iml" filepath="$PROJECT_DIR$/web/supervisor-web.iml" />
+    </modules>
+  </component>
+</project>

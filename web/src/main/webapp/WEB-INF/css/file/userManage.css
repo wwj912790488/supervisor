@@ -1,0 +1,144 @@
+.tabContent {
+	float: left;
+	width: 98%;
+	height: 500px;
+}
+.tblcol2 {
+	width: 98%;
+	margin-top: 50px;
+}
+/*.tblcol2 tr {
+	padding: 2px;
+	margin: 2px;
+}*/
+
+.tblcol2 .collbl {
+	text-align: right;
+	width: 30%;
+	padding: 10px;
+}
+.tblcol2 .colval {
+	text-align: left;
+	width: 70%;
+	padding: 10px;
+}
+
+.upgrade_btn{
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+	vertical-align: baseline;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 12px/100% Arial, Helvetica, sans-serif;
+	padding: .5em 2em .55em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-border-radius: .5em; 
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	width:100px;
+}
+
+.SettingTable{
+	width: 100%;
+	border: 1px solid;
+	border-collapse: collapse;
+}
+
+.SettingTable th{
+	border: 1px solid;
+	font-weight: bold;
+	text-align: left;
+	padding: 2px;
+	marggin: 2px;
+}
+
+.SettingTable td{
+	border: 1px solid;
+	padding: 2px;
+	marggin: 2px;
+}
+
+.ActionItem{
+	text-decoration:underline;
+	padding: 1px 6px;
+	cursor: pointer;
+	color: blue;
+}
+.TableColTitleText {
+	/*font-weight: bold;*/
+}
+
+.rolesel{
+	width: 258px;
+	/*padding: 5px;*/
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+
+.add-user {
+	height:28px;
+	margin-bottom:5px;
+}
+
+.add-user .action-btn {
+	float:right;
+	margin-right:10px;
+}
+
+.add-user .btn-icon {
+	display:inline-block;
+	width : 13px;
+	background: url(../../images/common/buttons/add.png) no-repeat 0px 7px;
+	margin:0px 10px;
+}
+
+.add-user .btn-text {
+	font-size:15px;
+	margin:0px 12px;
+	line-height:26px;
+}
+
+
+/**********************************************/
+
+.action-bar {
+	height: 45px;
+	background-color: #254f79;
+}
+
+#user-list-table {
+	width: 100%;
+}
+#user-list-table .right-align {
+	text-align: right;
+}
+
+tr th {
+	background:rgb(228, 228, 228);
+	font-size: 14px;
+	font-weight:bold;
+	color: #333;
+	height: 36px;
+	text-align:center;
+}
+
+tr td {
+	font-size:14px;
+	font-weight:normal;
+	height:46px;
+	text-align:center;
+	border-bottom:1px solid #D7D7D7;
+}
+
+.tblcol2 tr td
+{
+	border-bottom: 0;
+}

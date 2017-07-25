@@ -1,0 +1,227 @@
+.content-wrapper {
+	background-color:#2C4765;
+}
+
+/************ jquery ui accordion **************/
+.ui-accordion .ui-accordion-content {
+  padding: 0em;
+}
+
+.ui-accordion .ui-accordion-content ul li{
+	margin: 0px;
+  	height: 40px;
+  	border-bottom: 2px solid #173957;
+  	background-color:#2C4765;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  border: 1px solid #d3d3d3;
+  background: #e6e6e6 url("images/ui-bg_glass_75_e6e6e6_1x400.png") 50% 50% repeat-x;
+  font-weight: normal;
+  color: #555555;
+}
+
+.ui-accordion .ui-accordion-content ul li span{
+	margin-left: 20px;
+	line-height: 40px;
+	font-size:13px;
+	display: inline-block;
+	color: white;
+}
+
+.ui-accordion .ui-accordion-header {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  margin: 2px 0 0 0;
+  padding: .5em .5em .5em 1.8em;
+  font-size: 14px;
+}
+
+/************ accordion **************/
+#accordion {
+	height: 399px;
+	padding-left:1px;
+	padding-right: 1px;
+	padding-bottom:1px;
+	overflow: auto;
+}
+
+#accordion a {
+	cursor:pointer;
+	display:block;
+}
+
+#accordion a:hover {
+	background-color:rgb(67,142,185);
+}
+
+#accordion li.selected a {
+	background-color:rgb(47,122,165);
+}
+/*
+#accordion .nav-title {
+	line-height:40px;
+	width: 120px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+#accordion .selected 
+#accordion a:hover {
+	display:block;
+}
+
+#accordion span {
+	display:inline-block;
+	font-size:13px;
+	color: #fff;
+}
+*/
+
+#accordion .nav-icon {
+	width:40px;
+/*	height:40px;
+	background:url("../images/channel_r.png");*/
+}
+
+
+.list {
+	background-color:#fff;
+}
+
+.list .head .title {
+	float:left;
+	margin-left:20px;
+}
+
+.title .title-icon {
+	display:inline-block;
+	width:40px;
+	height:40px;
+	background:url("../images/channel_l.png");
+	vertical-align:bottom;
+}
+
+.title .title-name {
+	display:inline-block;
+	line-height:42px;
+	font-size:14px;
+	width:200px;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	vertical-align:bottom;
+}
+
+.list .head .add-channel {
+	float:right;
+	margin-top:10px;
+	margin-right:15px;
+}
+
+#channel-list-content {
+	height:455px;
+}
+
+#channels-table {
+	width:100%;
+	border-right:1px solid #D7D7D7
+}
+
+#channels-table .right-align {
+	text-align:right;
+}
+
+tr th {
+	background:rgb(228, 228, 228);
+	font-size: 14px;
+	font-weight:bold;
+	color: #333;
+	height: 36px;
+	text-align:center;
+}
+
+tr td {
+	font-size:14px;
+	font-weight:normal;
+	height:46px;
+	text-align:center;
+	border-bottom:1px solid #D7D7D7;
+}
+tr.odd td {
+	background:rgb(221, 236, 247);
+}
+
+
+.InputDetail .Item{
+	min-width:100px;
+	text-align:left;
+	margin:5px 0px;
+}
+
+.InputDetail .Lbl{
+	display:inline-block; 
+	padding-right:6px;
+	width:80px;
+	text-align:right;
+}
+
+.InputDetail .Val{
+	display: inline-block; 
+	text-align: left;
+	vertical-align:bottom;	
+	max-width:420px;
+	text-overflow:ellipsis;overflow:hidden;work-wrap:break-word;word-break:break-all;
+}
+
+.line {
+	margin-bottom:20px;
+}
+
+input[type="checkbox"] {
+	vertical-align:middle;
+}
+
+select:disabled {
+background-color: rgb(235, 235, 228);
+}
+
+#TMPlayer .player-title{
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	font-size:15px;
+	color: #000;
+	line-height: 45px;
+	padding: 2px 0px 3px 15px;
+} 
+
+#channel-info-content {
+	overflow: hidden;
+  	outline: none;
+	height:225px;
+}
+
+#channel-info-table {
+	width:100%;
+	border-right:1px solid #D7D7D7;
+}
+
+
+.head {
+	border: 1px solid #D7D7D7;
+}
+
+.log-id{
+	text-align: center;
+}
+
+#summary-container {
+	background: white;
+    height: auto;
+    max-width: 1024px;
+    margin: 0px auto;
+}
+

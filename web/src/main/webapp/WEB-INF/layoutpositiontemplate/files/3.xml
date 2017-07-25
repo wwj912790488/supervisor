@@ -1,0 +1,29 @@
+<LayoutPositionTemplate>
+    <guid>c064d02f-b87e-43cb-b514-3fbfd7af0729</guid>
+    <rowCount>2</rowCount>
+    <columnCount>2</columnCount>
+        <position>
+            <row>0</row>
+            <column>0</column>
+            <x>1</x>
+            <y>1</y>
+        </position>
+        <position>
+            <row>0</row>
+            <column>1</column>
+            <x>1</x>
+            <y>1</y>
+        </position>
+        <position>
+            <row>1</row>
+            <column>0</column>
+            <x>1</x>
+            <y>1</y>
+        </position>
+        <position>
+            <row>1</row>
+            <column>1</column>
+            <x>1</x>
+            <y>1</y>
+        </position>
+</LayoutPositionTemplate>

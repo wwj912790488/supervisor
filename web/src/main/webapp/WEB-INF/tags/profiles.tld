@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+        version="2.1">
+
+    <tlib-version>1.0</tlib-version>
+    <short-name>profiles</short-name>
+    <tag>
+        <description>
+            A tag represents sartf profile
+        </description>
+        <name>sartf</name>
+        <tag-class>com.arcsoft.supervisor.commons.jsp.tag.profile.SartfProfileTag</tag-class>
+        <body-content>scriptless</body-content>
+    </tag>
+
+    <tag>
+        <description>
+            A tag represents production profile
+        </description>
+        <name>production</name>
+        <tag-class>com.arcsoft.supervisor.commons.jsp.tag.profile.ProductionTag</tag-class>
+        <body-content>scriptless</body-content>
+    </tag>
+
+    <tag>
+        <name>profiles</name>
+        <tag-class>com.arcsoft.supervisor.commons.jsp.tag.profile.ProfileTag</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <description>
+                Comma separator string of profile.
+            </description>
+            <name>hasProfiles</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>
+                Comma separator string of profile.
+            </description>
+            <name>hasAnyProfile</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>
+                Comma separator string of profile.
+            </description>
+            <name>nothasProfiles</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+
+</taglib>

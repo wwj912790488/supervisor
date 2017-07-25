@@ -1,0 +1,106 @@
+#!/bin/bash
+#
+# agentd        This shell script takes care of starting and stopping
+#               the ArcVideo Commander Agent (agentd).
+#
+# chkconfig: - 90 10
+# description: The ArcVideo Commander Agent.
+#
+
+#
+# Source profile settings
+#
+. /etc/profile
+
+#
+# Source function library.
+#
+. /etc/rc.d/init.d/functions
+
+#
+# initial values
+#
+prog=supervisorAgentd
+home=/usr/local/arcsoft/arcvideo/supervisor-agent
+
+#
+# Set timeouts here
+#
+STOP_TIMEOUT=10
+RETVAL=0
+
+#
+# start service
+#
+start() {
+  PID=`ps -ef | grep $home/conf | grep -v grep | awk '{print $2}'`
+  if [ ! -z "$PID" ]; then
+    echo "The $prog: is already running, pid=$PID"
+  else
+    echo $"Starting $prog: "
+    exec "$home/bin/startup.sh" &
+  fi
+}
+
+#
+# stop service
+#
+stop() {
+  PID=`ps -ef | grep $home/conf | grep -v grep | awk '{print $2}'`
+  if [ ! -z "$PID" ]; then
+    # try term the application before force kill
+    echo -n $"Stopping  $prog:"
+	exec "$home/bin/shutdown.sh" &
+
+	if checkpid $PID 2>&1; then
+      # check pid every 1s
+      usleep 100000
+      count=$STOP_TIMEOUT
+      while checkpid $PID && [ "$count" -gt 0 ]; do
+        sleep 1
+        count=$(($count-1))
+      done
+
+      # if timeout, force kill the process
+      if checkpid $PID; then
+        kill -KILL $PID >/dev/null 2>&1
+      fi
+    fi
+  fi
+}
+
+#
+# service status
+#
+status() {
+  PID=`ps -ef | grep $home/conf | grep -v grep | awk '{print $2}'`
+  if [ ! -z "$PID" ]; then
+    echo "$prog: is running, pid=$PID"
+  else
+    echo "$prog: is not running"
+  fi
+}
+
+#
+# See how we were called.
+#
+case "$1" in
+  start)
+    start
+    ;;
+  stop)
+    stop
+    ;;
+  status)
+    status
+    ;;
+  restart)
+   stop
+   start
+   ;;
+  *)
+   echo $"Usage: $prog {start|stop|restart|status}"
+   RETVAL=2
+esac
+
+exit $RETVAL

@@ -1,0 +1,171 @@
+#outputprofilelist-container .action-bar {
+	height:45px;
+	background-color:#254f79;
+}
+#outputprofilelist {
+	width: 100%;
+}
+
+#outputprofilelist tr th {
+	background:rgb(228, 228, 228);
+	font-size: 14px;
+	font-weight:bold;
+	color: #333;
+	height: 36px;
+	text-align:center;
+}
+
+#outputprofilelist tr td {
+	font-size:14px;
+	font-weight:normal;
+	height:46px;
+	text-align:center;
+	border-bottom:1px solid #D7D7D7;
+}
+
+#outputprofile-title {
+	font-size: 15px;
+	line-height: 30px;
+	border-bottom: solid 3px rgb(176,176,176);
+	margin-top: 20px;
+}
+
+#outputprofile-basic {
+	margin: 15px 0px;
+}
+
+.line span {
+	font-size: 13px;
+}
+
+.line-block, .line-block2 {
+	float: left;
+	text-align: right;
+}
+
+.line-block-right {
+	float: right;
+}
+
+.line-block-right:before {
+	display:inline;
+	content: "\00A0";
+}
+
+.line-block, .line-block-right {
+	line-height: 35px;
+}
+
+.line-block2 {
+	line-height:60px;
+}
+
+.line span, .line-block input,.line-block select, .line-block2 span, .line-block2 input, .line-block2 textarea {
+	vertical-align: middle;
+}
+
+.line-block select {
+	width: 110px;
+}
+
+.line-block input[type="text"] {
+	width: 66px;
+}
+
+#streamprofile {
+	border: solid 1px rgb(176,176,176);
+	background: white;
+}
+
+#streamprofile-title {
+	background: rgb(217,217,217);
+	line-height: 40px;
+	font-size: 15px;
+	padding-left: 20px;
+}
+
+#streamporfile-content {
+	padding: 0 20px;
+}
+
+#outputprofile-summary {
+	line-height: 50px;
+	border-bottom: dotted 1px #cccccc;
+}
+
+#outputprofile-summary span {
+	font-size: 10px;
+}
+
+.stream-title-line {
+	margin-top: 10px;
+}
+
+.stream-title {
+	color: rgb(24, 149, 193);
+	font-size: 15px;
+	padding: 0px 10px;
+}
+
+.videoprofile-remove-btn, .audioprofile-remove-btn {
+	display:inline-block;
+	width: 28px;
+	height: 28px;
+	cursor: pointer;
+	vertical-align: middle;
+	background:url(../images/common/delete_n.png);
+}
+
+.videoprofile-remove-btn:hover, .audioprofile-remove-btn:hover {
+	background:url(../images/common/delete_p.png);
+}
+
+.sectiontitle {
+	font-size: 15px;
+	line-height: 35px;
+}
+
+.section-trigger {
+	cursor: pointer;
+}
+
+.sectiontitle:before {
+	display:inline-block;
+	float:left;
+	content: "";
+	width:30px;
+	height:30px;
+	vertical-align: middle;
+	background: url(../images/common/arrow_down.png);
+}
+
+.section-collapse .sectiontitle:before {
+	display:inline-block;
+	content: "";
+	width:30px;
+	height:30px;
+	vertical-align: middle;
+	background: url(../images/common/arrow_right.png);	
+}
+
+.section-collapse .sectioncontent {
+	display: none;
+}
+
+.section {
+	border-bottom: dotted 1px #cccccc;
+}
+
+#videoprofiles-add-btn, #audioprofiles-add-btn{
+	float: right;
+	line-height: 35px;
+}
+
+#videoprofiles-add-btn .dialog-btn, #audioprofiles-add-btn .dialog-btn{
+	vertical-align: middle;
+}
+
+#outputprofile-submit {
+	text-align: center;
+	margin: 20px 0px;
+}

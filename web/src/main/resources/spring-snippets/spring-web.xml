@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Below defined beans just used for local testing. Actually the content of
+     this file will replace by specific content associated to profile. -->
+
+    <beans profile="production">
+        <mvc:interceptors>
+            <mvc:interceptor>
+                <mvc:mapping path="/**"/>
+                <!-- Do not uncomment below config. It functional is disable the OpenEntityManagerInViewInterceptor
+                     in there urls. -->
+                <mvc:exclude-mapping path="/setscreen_app"/>
+                <mvc:exclude-mapping path="/preview_app"/>
+                <mvc:exclude-mapping path="/task/**"/>
+                <bean class="org.springframework.orm.jpa.support.OpenEntityManagerInViewInterceptor"
+                      p:entityManagerFactory-ref="entityManagerFactory"/>
+            </mvc:interceptor>
+        </mvc:interceptors>
+    </beans>
+
+    <beans profile="sartf">
+        <mvc:interceptors>
+            <mvc:interceptor>
+                <mvc:mapping path="/**"/>
+                <!-- Do not uncomment below config. It functional is disable the OpenEntityManagerInViewInterceptor
+                     in there urls. -->
+                <mvc:exclude-mapping path="/setscreen_app"/>
+                <mvc:exclude-mapping path="/preview_app"/>
+                <mvc:exclude-mapping path="/startconfig_app"/>
+                <mvc:exclude-mapping path="/stopconfig_app"/>
+                <mvc:exclude-mapping path="/login_app"/>
+                <mvc:exclude-mapping path="/logout_app"/>
+                <mvc:exclude-mapping path="/task/**"/>
+                <mvc:exclude-mapping path="/user/unbindOps"/>
+                <mvc:exclude-mapping path="/usr/delete"/>
+                <bean class="org.springframework.orm.jpa.support.OpenEntityManagerInViewInterceptor"
+                      p:entityManagerFactory-ref="entityManagerFactory"/>
+            </mvc:interceptor>
+        </mvc:interceptors>
+        <mvc:resources mapping="/template/**" location="/WEB-INF/template/"/>
+    </beans>
+
+</beans>

@@ -1,0 +1,1117 @@
+Release notes on 10/09/2015
+1. Update ASH264Vid.dll fix bug(ACV-6646)
+2. Version number: 2.0.0.91
+-----------------------------------
+Release notes on 9/25/2015
+1. Update ASVid.ax,avcodec.dll,ascodec.dll to fix bugs
+2. Update RTPSplitter.dll to fix bugs
+3. Version number: 2.0.0.90
+-----------------------------------
+Release notes on 9/17/2015
+1. Update ascodec.dll to fix bug CLOUD-1019
+2. Update AurlDeal.dll,ASHttpSrc.ax,ASFLVSplitter.ax to support rtmp input
+3. Version number: 2.0.0.89
+-----------------------------------
+Release notes on 9/06/2015
+1. Update ascodec.dll to fix bug CLOUD-914
+2. Version number: 2.0.0.88
+-----------------------------------
+Release notes on 8/28/2015
+1. Update Audio Decoder to fix bug CLOUD-779
+2. Update Video Decoder to fix bug CLOUD-914
+3. Version number: 2.0.0.87
+-----------------------------------
+Release notes on 5/7/2015
+1. Update Audio Decoder to fix bug ACV-5971
+2. Version number: 2.0.0.85
+
+Test Affect:
+1. AAC Audio Decoder
+
+Morgan Wang
+5/7/2015
+-----------------------------------
+Release notes on 4/27/2015
+1. Update DVD Source Filter to fix bug ACV-6074
+2. Update ArcDemux filter to fix bug ACV-5665
+3. Update ASVid.ax, ASAVSPlusVid.dll and libbavs.dll to fix bug ACV-5886, ACV-5946, ACV-5422
+4. Update Audio Decoder to fix bug ACV-5971
+5. Update SubtitleSpliterFilter.ax to fix bug ACV-6078
+6. Update source filter for "FTP地址中特殊符号的转换"
+7. Update Subtitle Decoder to fix bug COL-180: 添加字幕后再去设置宽高比会使预览时字幕位置不对
+8. Version number: 2.0.0.84
+
+Test Affect:
+1. DVD media.
+2. MPEG media.
+3. Video Decoder
+4. AAC Audio Decoder
+5. Subtitle Decoder
+6. Source Filter: ftp, rtsp/rtp, udp输入
+
+Morgan Wang
+4/27/2015
+-----------------------------------
+Release notes on 3/23/2015
+1. Update DVD Source Filter to fix bug ACV-5918
+2. Update ArcDemux filter to fix bug ACV-5787, ACV-5916
+3. Update source filter for ftp, rtsp/rtp, udp, hls
+4. Version number: 2.0.0.83
+
+Test Affect:
+1. DVD, MPEG media.
+2. ftp, rtsp/rtp, udp, hls输入
+
+Morgan Wang
+3/23/2015
+-----------------------------------
+Release notes on 3/17/2015
+1. Update BD Source Filter to fix bug ACV-5805, ACV-5807
+2. Update DVD Source Filter to fix bug ACV-5339.
+3. Update MP4 Splitter to fix bug ACV-5640.
+4. Update ArcDemux filter
+5. Update hls/ftp/udp source filter
+6. Version number: 2.0.0.82
+
+Test Affect:
+1. test DB, DVD, MP4 and MPEG media.
+2. hls、ftp、udp输入
+
+Morgan Wang
+3/17/2015
+-----------------------------------
+Release notes on 3/6/2015
+1. Update mp4splitter for streaming video/audio respectively if av interlace is bad (bug ACV-4658).
+2. Update hls/ftp/udp source filter
+3. Version number: 2.0.0.81
+
+Test Affect:
+1. test mp4 media with bad/normal av interlace.
+2. hls、ftp、udp输入
+
+Morgan Wang
+3/6/2015
+-----------------------------------
+Release notes on 3/3/2015
+1. Update VMFFilterGraph.dll to fix bug ACV-5691
+2. Update ftp/udp source filter
+3. Version number: 2.0.0.80
+
+Test Affect:
+1. 在各种极限操作情况下，有可能进度条显示不对（同一个时间点不同的画面）
+2. ftp、udp输入
+
+Morgan Wang
+3/3/2015
+-----------------------------------
+Release notes on 2/13/2015
+1.Update MPEG2 Video Decoder to fix bug COL-183.
+2.Update DVD Source Filter to fix bug ACV-5695.
+3.Fix bug ACV-5676(RTP组播地址输入) 
+4.Version number: 2.0.0.79
+
+Test Affect:
+1. udp、sdp输入
+2. mpeg2 video
+3. dvd media
+
+Morgan Wang
+2/13/2015
+-----------------------------------
+Release notes on 2/6/2015
+1.Update video decoder to fix bug ACV-5564.
+2.Update mp4 splitter to support DNxHD video (ACV-5555).
+3.Update RTP Splitter to support RTP SDP input (ACV-5517, ACV-5378).
+4.支持DVD多角度(ACV-5515).
+5.Version number: 2.0.0.78
+
+Test Affect:
+1. h.264 video
+2. mp4 media
+3. RTSP/RTP media
+
+Morgan Wang
+2/6/2015
+-----------------------------------
+Release notes on 1/30/2015
+1.TMPlayer应用层完成了 ACV-5517 Feature，底层 RTP Splitter 还没有完成。
+2.修改取flv文件帧率，蓝讯dump下来的flv文件取帧率不对.
+3.Version number: 2.0.0.77
+
+Test Affect:
+1. flv media
+
+Morgan Wang
+1/30/2015
+-----------------------------------
+Release notes on 1/14/2015
+1.Update mkv splitter to fix bug ACV-2853, ACV-3356, ACV-4976.
+2.Update AVS/AVSPlus decoder to fix bug ACV-5424.
+3.Update flv splitter to fix "时间戳有跳变" problem.
+4.Fix bug ACV-5364, ACV-5386.
+5.Version number: 2.0.0.76
+
+Test Affect:
+1. mkv, flv media
+2. AVS/AVSPlus video
+
+Morgan Wang
+1/14/2015
+-----------------------------------
+Release notes on 1/7/2015
+1.Update ASVid.ax、ASVC1Vid.dll & ASMPEGVid.dll to fix bug ACV-5347、ACV-5341、ACV-5361、ACV-5372.
+2.Update AVS/AVSPlus decoder.
+3.Update audio decoder to fix bug ACV-5322
+4.Update flv splitter to fix bug "如果pts超过4个小时会溢出".
+5.Update mp4 splitter to fix bug ACV-5009.
+6.Update ArcDemux to fix bug ACV-5335.
+7.Version number: 2.0.0.75
+
+Test Affect:
+1. flv, mp4, mpeg media
+2. AVS/AVSPlus, VC1, MPEG2 video
+
+Morgan Wang
+1/7/2015
+-----------------------------------
+Release notes on 12/26/2014
+1.Update video decoder to support h265 video.
+2.Update mxf splitter to support op1a ClipWrap PCM audio format(sony opt files).
+3.Update audio decoder to fix bug ACV-5071.
+4.Update mp4 splitter to fix bug ACV-4679.
+5.Update flv splitter: stop playback if PTS hopping.
+6.Update ArcDemux to fix bug ACV-5262.
+7.Fix bug ACV-5274.
+8.Version number: 2.0.0.74
+
+Test Affect:
+1. mxf, mp4, flv, media
+2. h265 video
+
+Morgan Wang
+12/26/2014
+-----------------------------------
+Release notes on 12/19/2014
+1.Update avsplus video decoder to fix bug ACV-5213.
+2.Fix bug ACV-2974.
+3.Version number: 2.0.0.73
+
+Test Affect:
+1. avsplus video
+
+Morgan Wang
+12/19/2014
+-----------------------------------
+Release notes on 12/12/2014
+1.Update video decoder for avsplus video.
+2.Update ArcSoft RTP splitter for AAC audio.
+3.Version number: 2.0.0.72
+
+Test Affect:
+1. avsplus video
+
+Morgan Wang
+12/12/2014
+-----------------------------------
+Release notes on 12/5/2014
+1. Update flv splitter to 
+   (1) Fix ACV-4829: 第三方工具，如elecard的EVQ视频分析工具，会根据默认的输入媒体类型来加载splitter，这样打开这类工具会失败，移除默认的类型{GUID_NULL, GUID_NULL}。
+   (2) Fix bug：在SearchFLVTagPos里会把previous size改掉。这是一直存在的bug，之前的flv最后几包都会被丢掉，另外如果碰到没有关键帧信息的metadata文件头，seek后会把源文件搞乱，播放可能有马赛克。
+2. Update mp4 splitter to fix ACV-4829: 第三方工具，如elecard的EVQ视频分析工具，会根据默认的输入媒体类型来加载splitter，这样打开这类工具会失败，移除默认的类型{GUID_NULL, GUID_NULL}。
+3. Update asf splitter to support Microsoft MPEG-4 Video Codec V2('MP42') (ACV-2395).
+4. Update avs decoder to fix bug ACV-4943.
+5. Update mkv splitter to fix bug ACV-4599, ACV-4600(The length of TimeCode in cluster may be error)
+6.Version number: 2.0.0.71
+
+Test Affect:
+1. test flv, mkv media
+2. test video格式为MP42的asf文件
+3. test all kinkds of AVS+/AVS media
+4. confirm fixed bugs.
+
+Morgan Wang
+12/5/2014
+-----------------------------------
+Release notes on 11/20/2014
+1.Update DVD source filter to fix "bug P176-Collector COL-156 DVD点上载后无法预览、无法上载".
+2.Update mp4 splitter to fix bug ACV-4719.
+3.Update flv splitter to fix bug ACV-4807.
+4.Fix bug ACV-4932, ACV-4923, ACV-3397, ACV-4937, ACV-4885
+5.Version number: 2.0.0.70
+
+Test Affect:
+1. test mp4, flv, dvd media
+2. confirm fixed bugs.
+
+Morgan Wang
+11/20/2014
+-----------------------------------
+Release notes on 10/30/2014
+1.Support rtmp media.
+2.Update h264 decoder dll for rtmp media.
+3.Fix bug ACV-4751
+4.Version number: 2.0.0.69
+
+Test Affect:
+1. test rtmp media
+2. test h264 video.
+
+Morgan Wang
+10/30/2014
+-----------------------------------
+Release notes on 10/24/2014
+1.Update mp4 splitter to fix bug ACV-4580
+2.Update mpeg decoder dll to fix bug ACV-4641 
+3.Update audio decoder to fix bug ACV-4588(flv mp3 no sound issue)
+4.Update mxf plitter to fix bug ACV-4526, ACV-4645
+5.New feature ACV-4630 输入音量显示
+6.Fix bug ACV-4659
+7.Version number: 2.0.0.68
+
+Test Affect:
+1. test mp4, mxf media
+2. test mpeg video.
+3. test 输入音量显示
+
+Morgan Wang
+10/24/2014
+-----------------------------------
+Release notes on 10/11/2014
+1.Update mp4 splitter to support DVCPRO HD video 
+2.Update audio decoder to fix bug ACV-4567
+3.Update mkv plitter to fix bug ACV-3785
+4.Update ASVid.ax, ASH264Vid.dll and ASMPEGVid.dll to fix bug ACV-4595, ACV-4557, ACV-4554
+5.Fix bug ACV-4553, ACV-4527, ACV-3350
+6.Version number: 2.0.0.67
+
+Test Affect:
+1. test mp4, mkv media
+2. test h264, mpeg video.
+
+Morgan Wang
+10/11/2014
+-----------------------------------
+Release notes on 09/25/2014
+1.Update ArcDemux.ax -- 解决华数的"打点不准的情况"。
+2.Update ASVid.ax and ASH264Vid.dll -- Fix bug ACV-4461(4k文件预览内存占用太高)
+3.Version number: 2.0.0.66.
+
+Test Affect:
+1. test ts media
+2. test mp4 media with h264 video.
+
+Morgan Wang
+09/25/2014
+-----------------------------------
+Release notes on 09/19/2014
+1.Support RLE video with mp4 media.
+2.Fix bug ACV-4245
+3.Update ArcSoft Media Splitter to play 4k avi media.
+4.Upadte ArcSoft MXF splitter.
+5.Fix two issues with audio volume display for Wasu.
+ (1).STD100N中 title22（TrueHD 48k/24 1ch 64kbps）源是一个声道，显示2个声道
+ (2).STD100N中 title27，mediainfo显示：Front：LCR，Side：LR，LFE。而我们显示（左声道左环绕后左环绕，右声道右环绕后右环绕）
+6.Version number: 2.0.0.65.
+
+Test Affect:
+1. test mp4 media
+2. test mxf media
+
+Morgan Wang
+09/19/2014
+-----------------------------------
+Release notes on 09/15/2014
+1. Update ASMKVSplitter.ax to fix bug ACV-3792 and ACV-4255
+2. Update H264 Decoder to fix bug ACV-4279.
+3. Fix bug ACV-4276.
+4. Version Number: 2.0.0.64
+
+Test Affect:
+1. test mkv media
+2. test media with h264 video
+
+Morgan Wang
+09/15/2014
+-----------------------------------
+Release notes on 09/05/2014
+1. Display audio volume(decibel) chart.
+2. Version Number: 2.0.0.63
+
+Test Affect:
+1. test audio channels and volume
+
+Morgan Wang
+09/05/2014
+-----------------------------------
+Release notes on 09/02/2014
+1. Update the latest ArcDemux.
+2. Version Number: 2.0.0.62
+
+Test Affect:
+1. test mpeg, udp media
+2. select program and video, audio, subtitle track.
+
+Morgan Wang
+09/02/2014
+-----------------------------------
+Release notes on 08/26/2014
+1. Update ArcSoft Video Decoder to fix bug ACV-3991.
+2. Update ArcSoft MP4 splitter to fix bug ACV-4145.
+3. Version Number: 2.0.0.61
+
+Test Affect:
+1. test mp4 media
+
+Morgan Wang
+08/26/2014
+-----------------------------------
+Release notes on 08/13/2014
+1. Improve SelectTrackByID API for user to specifically pass Program ID.
+2. Update ArcSoft FLV splitter to fix bug ACV-3924 for h264 video.
+3. Update ArcSoft MKV splitter to fix bug ACV-3937.
+4. Version Number: 2.0.0.60
+
+Test Affect:
+1. flv seek.
+2. test mkv media
+
+Morgan Wang
+08/13/2014
+-----------------------------------
+Release notes on 08/07/2014
+1. Update ArcSoft Video decoder to fix bug ACV-3315.
+2. Update ArcSoft FLV splitter to fix bug ACV-3924.
+3. Update old ArcSoft Demux to fix bug ACV-3927.
+4. Version Number: 2.0.0.59
+
+Test Affect:
+1. frame forward/backward and seek.
+2. flv seek.
+3. ts seek/stop/close
+
+Morgan Wang
+08/07/2014
+-----------------------------------
+Release notes on 08/04/2014
+1. Fix bug ACV-3803.
+2. Update ArcSoft Video Decoder.
+3. Update ArcSoft Media Splitter.
+4. Version Number: 2.0.0.58
+
+Test Affect:
+1. Go through all kinds of video codecs.
+
+Morgan Wang
+08/04/2014
+-----------------------------------
+Release notes on 07/31/2014
+1. Expand EditWatchPoint API for user to display image on tip window.
+2. Update ArcSoft Video Decoder.
+3. Update ArcSoft Media Splitter.
+4. Version Number: 2.0.0.58
+
+Test Affect:
+1. Test UDP media.
+
+Morgan Wang
+07/31/2014
+-----------------------------------
+Release notes on 07/23/2014
+1. Update MKV splitter.
+2. Update PG subtitle decoder to support PGS embedded in MKV file.
+3. Update Sub-picture subtitle decoder to support VOBSUB embedded in MKV file.
+4. Version Number: 2.0.0.57
+
+Test Affect:
+1. Test MKV, M2TS, BD with PG subtitle.
+2. Test MKV, DVD with Sub-picture subtitle.
+
+Morgan Wang
+07/23/2014
+-----------------------------------
+Release notes on 07/15/2014
+1. Improvement for parsing avi media
+2. Version Number: 2.0.0.56
+
+Test Affect:
+1. Test avi media.
+
+Morgan Wang
+07/15/2014
+-----------------------------------
+Release notes on 07/11/2014
+1. Fix bug ACV-1856
+2. Fix bug ACV-3571
+3. Fix bug ACV-2767
+4. Version Number: 2.0.0.56
+
+Test Affect:
+1. Test seek of mxf media.
+2. Test mp4 media.
+3. Test flv media.
+
+Morgan Wang
+07/11/2014
+-----------------------------------
+Release notes on 07/07/2014
+1. Fix 3 bugs for mxf media: ACV-2796, ACV-1432，ACV-1856
+2. Fix bug ACV-3430 -- failed to play some h264 video
+3. Fix bug ACV-3477 -- video decoder updated for AVS plus file top bottom field error
+4. Fix bug ACV-3252: 有三个文件在加载外挂字幕预览时，图像发生变化，被压缩.
+5. Fix the issue that some BD can't be played.
+6. Version Number: 2.0.0.55
+
+Test Affect:
+1. Test mxf media.
+2. Test h264, avs+ media
+3. Test BD media.
+
+Morgan Wang
+07/07/2014
+-----------------------------------
+Release notes on 06/27/2014
+1. Fix bug ACV-3348 [preview]BD 拼接，第一条流字幕选择none，第二条流字幕选择英文，播放时第一条流字幕也变成英文Best Regards
+2. Fix bug ACV-3342 [preview]播放DVD多title拼接时，无法直接拖进度条到最后
+3. Fix bug ACV-3451 [preview]源为http ts文件，媒体信息取得不正确
+4. Fix bug ACV-3345 [preview]播放TS多频道的文件时，选流播放失败 -- 回退了 ArcDemux.
+5. Fix bug ACV-3406 [preview]播放TS文件时，精确seek点跟原来的版本不一致 -- 回退了 ArcDemux.
+6. Version Number: 2.0.0.54
+
+Test Affect:
+1. Transcoding and previewing http/m3u8 source.
+
+Morgan Wang
+06/27/2014
+-----------------------------------
+Release notes on 06/20/2014
+1. Fix bug ACV-3308: [preview]某些http地址的m3u8文件无法播放
+2. Fix bug ACV-3189: [preview]自己编码的文件播放时有丢帧现象
+3. Add feature ACV-2871: [0530绿点功能]外挂字幕优化：位置、增加微软雅黑、中英文字体大小单独设置
+4. Version Number: 2.0.0.53
+
+Morgan Wang
+06/20/2014
+-----------------------------------
+Release notes on 06/17/2014
+1. Fix bug ACV-3243: 某些BD文件预览时播放时间无法自动结束
+2. Version Number: 2.0.0.52
+
+Morgan Wang
+06/17/2014
+-----------------------------------
+Release notes on 06/12/2014
+1. Fix bug ACV-3102: [preview]播放自己转出来的MP4多音频流的文件，某些流播放时最后部分没声音
+2. Fix bug ACV-3118: [preview]某个http m3u8文件播放时无法seek
+3. Fix bug ACV-2080: [preview edit]在preview界面框选位置或点选位置，鼠标不停在闪烁
+4. Fix bug ACV-3083: 区域选择开启后，鼠标移到播放器窗口上就会一直闪。
+5. Fix bug ACV-2955: WASU提供的FLV HTTP地址基本都不能预览
+6. Version Number: 2.0.0.52
+
+Morgan Wang
+06/12/2014
+-----------------------------------
+Release notes on 06/04/2014
+1. Add feature ACV-2868: [0530绿点功能]FTP 输入，MP4/MOV音轨选择.
+2. Fix bug ACV-2322: 部分Tmplayer版本插件不能自动更新版本.
+3. Fix bug ACV-2430: [TMPlayer]安装插件的时候等待时间太久,有时候更新不了.
+4. Update ArcSoft MKV Splitter for embedded ass subtitle -- remove token pair('{','}). 
+   Affect/Risk: Only affect ass subtitle embedded in MKV file.
+5. Version Number: 2.0.0.51
+
+Morgan Wang
+06/04/2014
+-----------------------------------
+Release notes on 06/03/2014
+1. Add feature ACV-2868: [0530绿点功能]FTP 输入，MP4/MOV音轨选择.
+2. Fix bug ACV-1837: 在预览界面DVD使用seek快捷键方向向右，长按时会有杂音.
+3. Version Number: 2.0.0.50
+
+Morgan Wang
+06/03/2014
+-----------------------------------
+Release notes on 05/28/2014
+1. Update ASCodec.ini for "TextVerticalAlignMode".
+2. Version Number: 2.0.0.49
+
+Morgan Wang
+05/28/2014
+-----------------------------------
+Release notes on 05/26/2014
+1. Add two APIs for user to set external subtitle font info and text box position/size.
+2. Fix bug ACV-2117: 播放器-播放或者暂停状态下进行区域选择十分卡.
+3. Fix bug ACV-2729: Preview AVS文件，网页会crash.
+4. Fix bug ACV-2955: WASU提供的FLV HTTP地址基本都不能预览.
+5. Version Number: 2.0.0.48
+
+Morgan Wang
+05/26/2014
+-----------------------------------
+Release notes on 05/19/2014
+1. Version Number: 2.0.0.47
+
+Morgan Wang
+05/19/2014
+-----------------------------------
+Release notes on 05/13/2014
+1. Fix ACV-2692(播放器预览占用链接过多，导致服务卡死).
+2. Version Number: 2.0.0.46
+
+Morgan Wang
+05/13/2014
+-----------------------------------
+Release notes on 05/12/2014
+1. Fix bug2544 (【外挂字幕】一个ssa字幕文件预览时，一段时间后会一直显示一段字幕，但实际上那段字幕只应该显示3秒钟。)
+2. Version Number: 2.0.0.45
+
+Morgan Wang
+05/12/2014
+-----------------------------------
+Release notes on 05/08/2014
+1. Fix bugs: ACV-2692, ACV-2599, ACV-1385
+2. Version Number: 2.0.0.44
+
+Morgan Wang
+05/08/2014
+-----------------------------------
+Release notes on 05/04/2014
+1. Fix bugs: ACV-2694, ACV-2624, ACV-2604, ACV-1837
+2. Version Number: 2.0.0.43
+
+Morgan Wang
+05/04/2014
+-----------------------------------
+Release notes on 4/28/2014
+1. Add EditWatchPoint API for user to edit(add,remove,modify) watch point.
+2. Display watch point(s) on progress bar.
+3. Show tip of watch point as user moves mouse near watch point.
+4. Accurately seek to the closest watch point as Ctrl key is pressed down.
+5. Shift to accurate seeking if Shift key is pressed down.
+6. Adjust progress bar to fit into the width of video window -- for this case, change ResizeMode parameter to 7 in WelcomeTMPlayer API.
+7. Fix bug ACV-2627
+8. Version Number: 2.0.0.42
+
+Morgan Wang
+4/28/2014
+-----------------------------------
+Release notes on 4/16/2014
+1. Fix bug ACV-2502: [编码预览,字幕位置]先上下加黑边，然后增加字幕，字幕位置不对.
+2. Fix bug ACV-2388: BD文件字幕转码后只有前面一段有字幕，预览正常.
+3. Version Number: 2.0.0.41
+
+Morgan Wang
+4/16/2014
+-----------------------------------
+Release notes on 4/14/2014
+1. Fix bug ACV-2494: .H264后缀的H264文件，FTP输入没有连接我们自己的source.
+2. Version Number: 2.0.0.40
+
+Morgan Wang
+4/14/2014
+-----------------------------------
+Release notes on 4/9/2014
+1. Update ArcSoft MKV Splitter for selecting video/audio/subtitle track.
+2. Update Subtitle Decoder for embedded subtitle.
+3. Version Number: 2.0.0.39
+
+Morgan Wang
+4/9/2014
+-----------------------------------
+Release notes on 4/3/2014
+1. Fix bugs for FTP source.
+2. Update Subtitle Decoder.
+3. Fix ACV-2145 bug with BD/DVD source filter.
+4. Version Number: 2.0.0.38
+
+Morgan Wang
+4/3/2014
+-----------------------------------
+Release notes on 4/1/2014
+1. Support FTP source by using ASHttpSrc filter.
+2. Version Number: 2.0.0.37
+
+Morgan Wang
+4/1/2014
+-----------------------------------
+Release notes on 03/27/2014
+1. The feature for multiple mosaic styles(颗粒,擦除,模糊) is implemented.
+2. Old Subtitle Splitter(SubtitleSpliter.ax) was replaced with New Subtitle Spliter Filter(SubtitleSpliterFilter.ax) which supports ssa/ass subtitle.
+3. Version Number: 2.0.0.36
+
+Morgan Wang
+03/27/2014
+-----------------------------------
+Release notes on 03/20/2014
+1. Add AddMosaicMaskEx and ClearMosaicMask APIs.
+2. Version Number: 2.0.0.35
+
+Morgan Wang
+03/20/2014
+-----------------------------------
+Release notes on 03/14/2014
+1. Fix bugs.
+2. Version Number: 2.0.0.34
+
+Morgan Wang
+03/14/2014
+-----------------------------------
+Release notes on 03/11/2014
+1. Fix bugs.
+2. Version Number: 2.0.0.33
+
+Morgan Wang
+03/11/2014
+-----------------------------------
+Release notes on 03/03/2014
+1. Fix bugs.
+2. Version Number: 2.0.0.32
+
+Morgan Wang
+03/03/2014
+-----------------------------------
+Release notes on 02/21/2014
+1. Show media info on context menu.
+2. Fix bugs.
+3. Version Number: 2.0.0.31
+
+Morgan Wang
+02/21/2014
+-----------------------------------
+Release notes on 02/17/2014
+1. Fixed bugs.
+2. Version Number: 2.0.0.30
+
+Morgan Wang
+02/17/2014
+-----------------------------------
+Release notes on 02/12/2014
+1. Support seeking for m3u8 media.
+2. Fixed bugs.
+3. Version Number: 2.0.0.29
+
+Morgan Wang
+02/12/2014
+-----------------------------------
+Release notes on 01/26/2014
+1. Support backup font for subtitle(set by ASCodec.ini, default is 黑体).
+2. Fixed bugs.
+3. Version Number: 2.0.0.28
+
+Morgan Wang
+01/26/2014
+-----------------------------------
+Release notes on 01/21/2014
+1. Fixed bugs.
+2. Version Number: 2.0.0.27
+
+Morgan Wang
+01/21/2014
+-----------------------------------
+Release notes on 01/16/2014
+1. Fixed the issues for m3u8 media.
+2. Version Number: 2.0.0.26
+
+Morgan Wang
+01/16/2014
+-----------------------------------
+Release notes on 01/13/2014
+1. Add AddInsertClip method for app to add ads clips.
+2. Version Number: 2.0.0.25
+
+Morgan Wang
+01/13/2014
+-----------------------------------
+Release notes on 01/03/2014
+1. Fixed the issue for Wasu:
+  (1).打点不准的问题。
+2. Version Number: 2.0.0.24
+
+Morgan Wang
+01/03/2014
+-----------------------------------
+Release notes on 12/26/2013
+1. Fixed three issues from Wasu:
+  (1).打点不准的问题。
+  (2).打点拆条页面，需要按2次空格键的问题。
+  (3).镜头帧Seek问题。
+2. Fix issues for composite DVD/BD content.
+3. Version Number: 2.0.0.22
+
+Morgan Wang
+12/26/2013
+-----------------------------------
+Release notes on 12/19/2013
+1. Add the feature to preview composite DVD/BD content.
+2. Add the feature to set external subtitle opaque.
+3. Fix bugs.
+4. Version Number: 2.0.0.21
+
+Morgan Wang
+12/19/2013
+-----------------------------------
+Release notes on 12/10/2013
+1. Fix bugs.
+2. Version Number: 2.0.0.20
+
+Morgan Wang
+12/10/2013
+-----------------------------------
+Release notes on 12/4/2013
+1. Fix bugs.
+2. Version Number: 2.0.0.19
+
+Morgan Wang
+12/4/2013
+-----------------------------------
+Release notes on 12/2/2013
+1. Fix bugs.
+2. Update ffmpeg to latest ffmpeg 2.1, so please test all kinds of media, especially for UDP, MXF, AVI, RMV/RMA, OGM/OGG, MP3/MP2/MP1 media.
+3. Change seeking operation to asynchronous mode: ignore the previous pending seek operations if there is one latest seek.
+4. Version Number: 2.0.0.18
+
+Morgan Wang
+12/2/2013
+-----------------------------------
+Release notes on 11/29/2013
+1. Fix bugs.
+2. Update ffmpeg to latest ffmpeg 2.1, so please test all kinds of media, especially for UDP, MXF, AVI, RMV/RMA, OGM/OGG, MP3/MP2/MP1 media.
+3. Change seeking operation to asynchronous mode: ignore the previous pending seek operations if there is one latest seek.
+4. Version Number: 2.0.0.17
+
+Morgan Wang
+11/29/2013
+-----------------------------------
+Release notes on 11/25/2013
+1. Fix bugs.
+2. Version Number: 2.0.0.16
+
+Morgan Wang
+11/25/2013
+-----------------------------------
+Release notes on 10/31/2013
+1. Replace Subtitle Decoder Filter ArcText.ax with TextSTDecForPreview.ax.
+2. Add subtitle font border using black color.
+3. Add two parameters to SetTranscodeOutVideoSize API.
+4. Version Number: 2.0.0.14
+
+Morgan Wang
+10/31/2013
+-----------------------------------
+Release notes on 10/24/2013
+1. Just fix the crash bug for seeking dvd.
+2. Version Number: 2.0.0.13
+
+Morgan Wang
+10/24/2013
+-----------------------------------
+Release notes on 10/17/2013
+1. Just add error notificatin with BD source filter
+2. Version Number: 2.0.0.13
+
+Morgan Wang
+10/17/2013
+-----------------------------------
+Release notes on 10/11/2013
+1. Update for multiple logo images.
+2. Fix bugs with BD/DVD: cut time is not accurate.
+3. Update Subpicture Decoder for subtitle position and size.
+4. Version Number: 2.0.0.13
+
+Morgan Wang
+10/11/2013
+-----------------------------------
+Release notes on 9/25/2013
+1. Add SetTranscodeOutVideoSize API
+2. Version Number: 2.0.0.12
+
+Morgan Wang
+9/25/2013
+-----------------------------------
+Release notes on 9/16/2013
+1. Fix bugs
+2. Version Number: 2.0.0.11
+
+Morgan Wang
+9/16/2013
+-----------------------------------
+Release notes on 9/6/2013
+1. Cleanup APIs of SetBDPlaylist, SetBDAudio, SetBDSubtitle.
+2. SelectTrackByID before LoadMedia, and the selected tracks will automatically be invalidated after Close Media.
+3. Fix a batch of bugs
+4. Version Number: 2.0.0.10
+
+Morgan Wang
+9/6/2013
+-----------------------------------
+Release notes on 8/20/2013
+1. Fix the issue of SRT subtitle: no subtitle if color is 0x000000.
+2. Support the feature to disable TS PG subtitle.
+3. Version Number: 2.0.0.8
+
+Morgan Wang
+8/20/2013
+-----------------------------------
+Release notes on 8/14/2013
+1. Improve the feature to resize logo icon according to output size.
+2. Support PG Subtitile for TS media.
+3. Support DVD Subpicture.
+4. Improve performance for seeking flv media.
+5. Improve performance for frame forward.
+6. BD Navigator/Source Filter updated.
+7. DVD Source Filter updated.
+8. Version Number: 2.0.0.7
+
+Morgan Wang
+8/14/2013
+-----------------------------------
+Release notes on 8/1/2013
+1. Add the feature to resize logo icon according to output size.
+2. Support space bar to play/pause playback.
+3. BD Navigator/Source Filter updated.
+4. PG Subtitile Decoder updated.
+5. 支持更多的3gp，mov文件（现在支持Video:H263,H264,MP4,MJPEG,Prores,MPEG2. Audio:AAC-LC,AMR,ADPCM,MP3,QCELP,PCM,ULAM）。
+6.为华数更改加黑边处理时的播放方式。
+7. Support remote DVD content.
+8. Support remote udp content.
+
+Morgan Wang
+8/1/2013
+-----------------------------------
+Release notes on 7/25/2013
+1. Support space bar to play/pause playback.
+2. Improve the performance for seeking media.
+
+Morgan Wang
+7/25/2013
+-----------------------------------
+Release notes on 7/23/2013
+1. Improve the performance to playback remote BD content.
+
+Morgan Wang
+7/23/2013
+-----------------------------------
+Release notes on 7/11/2013
+1. Support remote BD content.
+
+Morgan Wang
+7/11/2013
+-----------------------------------
+Release notes on 7/4/2013
+1. Support 4-2-2 mpeg video.
+2. Support mxf media
+3. Fix the bug of hangup.
+4. Fix the masaic issue.
+
+Morgan Wang
+7/4/2013
+-----------------------------------
+Release notes on 7/1/2013
+1. Support left/right key for frame backword/forward.
+
+Morgan Wang
+7/1/2013
+-----------------------------------
+Release notes on 6/20/2013
+1. Support more BD contents.
+2. Support H263 video decoding.
+
+Morgan Wang
+6/20/2013
+-----------------------------------
+Release notes on 6/18/2013
+1. Support ripped BD content.
+2. Fixed the issue: failed to seek some asf meida.
+
+Morgan Wang
+6/18/2013
+-----------------------------------
+Release notes on 6/4/2013
+1. Add GetVideoSnapshot function.
+2. Support h263 video.
+
+Morgan Wang
+6/4/2013
+-----------------------------------
+Release notes on 5/31/2013
+1. Support mod and ogv/ogg media.
+2. Employ ArcSoft Media Splitter(based on ffmpeg) to demux avi media instead of Windows AVI Splitter.
+
+Morgan Wang
+5/31/2013
+-----------------------------------
+Release notes on 5/29/2013
+1. Change SelectTrackByID(videoPID, audioPID, subtitlePID) function to SelectTrackByID(programIndex, videoPID, audioPID, subtitlePID).
+2. Add MediaAudioPID(programIndex, audioIndex) function to get the PID of audio track.
+
+Morgan Wang
+5/29/2013
+-----------------------------------
+
+Release notes on 5/15/2013
+1. Fix the crash bug for avi, wmv, asf media.
+
+Morgan Wang
+5/15/2013
+-----------------------------------
+Release notes on 5/8/2013
+1. Open remote(http) subtitle file.
+2. Set subtitle font name, position, delay time.
+3. Fix the issue of installation.
+
+Morgan Wang
+5/8/2013
+-----------------------------------
+Release notes on 4/28/2013
+1. Set subtitle font size and color.
+2. Fix the issue of subtitle for seeking and reloading.
+
+Morgan Wang
+4/28/2013
+-----------------------------------
+Release notes on 4/26/2013
+1. Fix an issue for MP3 audio.
+
+Morgan Wang
+4/26/2013
+-----------------------------------
+Release notes on 4/24/2013
+1. Add feature to save snap shot to JPEG file.
+2. Fix a bug of video decoder – video color is incorrect after applying trim out.
+
+Morgan Wang
+4/24/2013
+-----------------------------------
+Release notes on 4/23/2013
+1. Improve ApplyTrimout, ChangeAspectRatio, ChangeBlackMargin for app not to reload media.
+2. Fix a bug with video decoder in case that picture aspect ratio is not eqaul to 1.
+3. Fix an issue with ts file, vc1 video, dts audio.
+	
+Morgan Wang
+4/23/2013
+-----------------------------------
+Release notes on 4/19/2013
+1. Change GetNativeVideoWidth to GetVideoDisplayWidth method.
+2. Change GetNativeVideoHeight to GetVideoDisplayHeight method.
+3. Add GetVideoWidth method.
+4. Add GetVideoHeight method.
+5. Change display coordinate to picture coordinate for selecting rectangle/point operation.
+6. Fix a bug with invalid mov file.
+	
+Morgan Wang
+4/19/2013
+-----------------------------------
+Release notes on 4/17/2013
+1. Implemented mask color parameter for ApplyMaskout method.
+2. Implemented ChangeBlackMargin method.
+3. Add AddExtSubtitle method -- not implemented yet.
+4. Add SetExtSubtitlePos method -- not implemented yet.
+5. Add SetExtSubtitleFont method -- not implemented yet.
+6. Add SetExtSubtitleDelayTime method -- not implemented yet.
+	
+Morgan Wang
+4/17/2013
+-----------------------------------
+Release notes on 4/12/2013
+1. Add SelectTrackByID method -- implemented.
+2. Add GetCurrentSoundDb method -- implemented.
+3. Add mask color parameter for ApplyMaskout method -- not implemented yet.
+4. Add ChangeBlackMargin method -- not implemented yet.
+5. Add GetFullScreen method.
+
+Morgan Wang
+4/12/2013
+-----------------------------------
+Release notes on 4/9/2013
+1. Support .f4v file.
+2. Implement the features to get TS Program, Audio inf0.
+3. Implement the features to select TS Program, Audio.
+
+Morgan Wang
+4/9/2013
+-----------------------------------
+Release notes on 4/3/2013
+1. Save snapshot to local file – implemented.
+2. Add interface to get TS Program, Audio info – not implemented yet
+3. Add interface to select TS Program, Audio – not implemented yet.
+
+Morgan Wang
+4/3/2013
+-----------------------------------
+Release notes on 3/27/2013
+1. Add feature for selecting point.
+2. Support udp media.
+3. Fix an issue for adding logo image.
+
+Morgan Wang
+3/27/2013
+-----------------------------------
+Release notes on 3/21/2013
+1. Add UI for moving/modifying the select box.
+2. Fix some issues.
+
+Morgan Wang
+3/21/2013
+-----------------------------------
+Release notes on 3/20/2013
+1. Add new APIs for selecting box, applying mask out and trim out.
+
+Morgan Wang
+3/20/2013
+-----------------------------------
+Release notes on 3/13/2013
+1. Add APIs: GetVideoFrameRate, GetMediaDuration, GetVideoBitRate.
+
+Morgan Wang
+3/13/2013
+-----------------------------------
+Release notes on 3/12/2013
+1. Add remain mode for cut time segment.
+2. Change progress style: from trail to cursor.
+
+Morgan Wang
+3/12/2013
+-----------------------------------
+Release notes on 3/7/2013
+1. Show the cut segment on the progress bar.
+2. Fix the bug: failed to replay after stopped.
+
+Morgan Wang
+3/7/2013
+-----------------------------------
+Release notes on 3/6/2013
+1. Support multiple segments of adding cut image.
+
+Morgan Wang
+3/6/2013
+-----------------------------------
+Release notes on 3/5/2013
+1. Fixed the seek bug.
+2. Finish the features of adding mosaic mask, cut image(only one segment for now).
+3. Support DTS audio.
+4. Support RM video.
+
+Morgan Wang
+3/5/2013
+-----------------------------------
+Release notes on 3/4/2013
+1. Added StepForward, AddCutImage APIs.
+
+Morgan Wang
+3/4/2013
+-----------------------------------
+Release notes on 2/28/2013
+1. Fixed the crash bug which is caused by hardware decoding.
+
+Morgan Wang
+2/28/2013
+-----------------------------------
+Release notes on 2/27/2013
+1. Fix the issue of no logo added with asf/wmv video.
+
+Morgan Wang
+2/27/2013
+-----------------------------------
+Release notes on 2/26/2013
+1. Add APIs for app to get native video width/height.
+
+Morgan Wang
+2/26/2013

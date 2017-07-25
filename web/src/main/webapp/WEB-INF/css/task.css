@@ -1,0 +1,261 @@
+#outputtabs {
+	display: inline-table;
+	border-collapse:separate;
+	border-spacing:5px 0px;
+	height: 44px;
+}
+
+.outputtab {
+	display: table-cell;
+    width:160px;
+    vertical-align: bottom;
+    cursor:pointer;
+    text-align: center;
+}
+
+#taskoutput-header {
+	height: 40px;
+}
+
+#outputtabs-copy-btn,
+#outputtabs-add-btn {
+	float: right;
+}
+
+.outputtabs-btn-container {
+	margin-top: 8px;
+	height: 36px;
+	line-height: 36px;
+	background: url(../images/common/tab_normal.png);
+	float:right;
+	cursor: pointer;
+}
+
+#taskprofilelist-container .action-bar {
+	height:45px;
+	background-color:#254f79;
+}
+#taskprofilelist {
+	width: 100%;
+}
+
+#taskprofilelist tr th {
+	background:rgb(228, 228, 228);
+	font-size: 14px;
+	font-weight:bold;
+	color: #333;
+	height: 36px;
+	text-align:center;
+}
+
+#taskprofilelist tr td {
+	font-size:14px;
+	font-weight:normal;
+	height:46px;
+	text-align:center;
+	border-bottom:1px solid #D7D7D7;
+}
+
+#taskprofile-title {
+	height: 40px;
+	background: #f0f0f0;
+	font-size: 15px;
+	line-height: 40px;
+	padding: 0px 28px;
+}
+
+#taskprofile-content {
+	background: white;
+	padding: 0px 28px 30px 28px;
+}
+
+#taskprofile-basic {
+	padding-top: 20px;
+	padding-bottom: 30px;
+	border-bottom: 1px dotted #cccccc;
+}
+
+#taskprofile-basic input[type="text"] {
+	width: 230px;
+}
+
+#taskprofile-input {
+	margin-top: 30px;
+	background: rgb(243,243,243);
+}
+
+#taskprofile-outputprofile {
+	margin-top: 30px;
+}
+
+#taskprofile-output {
+	margin-top: 30px;
+}
+
+#output-current {
+	background: rgb(243,243,243);
+}
+
+#taskinput-content {
+	padding-top: 20px;
+	padding-bottom: 30px;
+}
+
+.component-title {
+	height: 40px;
+	line-height: 40px;
+	color: white;
+	background: #1b84a9;
+	padding: 0px 20px;
+	font-size: 15px;
+}
+
+#outputprofile-add-btn, #outputtabs-add-btn, #outputtabs-copy-btn, #output-stream-add-btn, #outputprofile-import-btn {
+	float: right;
+	line-height: 40px;
+}
+
+#outputprofile-add-btn .dialog-btn, #outputtabs-add-btn .dialog-btn, #outputtabs-copy-btn .dialog-btn, #output-stream-add-btn .dialog-btn, #outputprofile-import-btn .dialog-btn {
+	vertical-align: middle;
+}
+
+.outputprofile-remove-btn {
+	display:inline-block;
+	width: 28px;
+	height: 28px;
+	cursor: pointer;
+	vertical-align: middle;
+	background:url(../images/common/delete_n.png);
+}
+
+.outputprofile-remove-btn:hover {
+	background:url(../images/common/delete_p.png);
+}
+
+.outputprofile-content {
+	background: rgb(243,243,243);
+}
+
+#outputtabs-container {
+	height: 44px;
+	background: url(../images/common/bg_shadow.png);
+	border-bottom: 2px solid #43a2cc;
+}
+
+.active .tab-content {
+	background: url(../images/common/tab_focus.png);
+}
+
+.tab-content {
+	width: 100%;
+	line-height: 36px;
+	height: 36px;
+	background: url(../images/common/tab_normal.png);
+}
+
+.outputtabitem-remove-btn {
+	vertical-align: middle;
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	background: url(../images/common/tab_remove.png);
+}
+
+#outputtabs-next-btn {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+	background: url(../images/common/tab_arrow_next.png);
+}
+
+#outputtabs-prev-btn {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+	background: url(../images/common/tab_arrow_prev.png);
+}
+
+#outputtabs-width {
+	float:left;
+	height: 44px;
+}
+
+.outputoption {
+	font-size: 15px;
+}
+
+.outputoption .line-block input[type="text"] {
+	width: 120px;
+}
+
+#linkedprofile {
+	height: 40px;
+	background: #d9d9d9;
+	line-height: 40px;
+	font-size: 15px;
+	padding-left: 10px;
+}
+
+#output-stream-remove-btn {
+	display:inline-block;
+	width: 28px;
+	height: 28px;
+	cursor: pointer;
+	vertical-align: middle;
+	background:url(../images/common/delete_n.png);
+}
+
+#output-stream-remove-btn:hover {
+	background:url(../images/common/delete_p.png);
+}
+
+#taskprofile-submit, #importlist-submit, #saveoutputprofile-submit {
+	margin: 10px 0px;
+	text-align: center;
+}
+
+.import-item {
+	text-align: center;
+}
+
+.import-item input {
+	vertical-align: middle;
+}
+
+#importList-title, #saveoutputprofile-title {
+	text-align: center;
+	font-size: 15px;
+	height: 40px;
+	line-height: 40px;
+	color: white;
+	background: #1b84a9;
+}
+
+#importlist-modal {
+	display: none;
+	width: 500px;
+}
+
+#importlist-container {
+	margin: 20px 0px;
+}
+
+.audioprofiles-add-btn, .outputprofile-save-btn {
+	float: right;
+	line-height: 35px;
+}
+
+.audioprofiles-add-btn .dialog-btn, .outputprofile-save-btn .dialog-btn {
+	vertical-align: middle;
+}
+
+#global-validation-message {
+	background: #e83038;
+}
+
+#global-validation-message div {
+	font-size: 13px;
+	color: white;
+}

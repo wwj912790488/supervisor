@@ -1,0 +1,443 @@
+@CHARSET "UTF-8";
+
+.action-bar {
+	height: 45px;
+	background-color: #254f79;
+}
+
+
+tr th {
+	background:rgb(228, 228, 228);
+	font-size: 14px;
+	font-weight:bold;
+	color: #333;
+	height: 46px;
+	text-align: center;
+}
+
+tr td {
+	font-size:14px;
+	font-weight:normal;
+	height:46px;
+	text-align:left;
+	border-bottom:1px solid #D7D7D7;
+}
+
+
+.alltask{
+	font-family: "Microsoft YaHei", "SimHei", "Arial";
+	font-size: 15px;
+	font-weight: bold;
+	padding: 10px 0px;
+	margin: 0px 58px 0px 58px;
+}
+
+.alltask a{
+	font-family: "Microsoft YaHei", "SimHei", "Arial";
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.blueText{
+	font-family: "Microsoft YaHei", "SimHei", "Arial";
+	font-size: 15px;
+	font-weight: bold;
+	color: #4EB7EE;
+}
+.task_controlbar{
+	/* background-color:rgb(94, 105, 115); */
+	background: url(../images/action_bar_bg.png) repeat-x;
+	width: 100%;
+	height: 45px;
+	/* padding: 8px 0px; */
+}
+
+.task_button {
+	display: inline-block;
+	zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
+	*display: inline;
+	vertical-align: baseline;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 10px/100% Arial, Helvetica, sans-serif;
+	padding: .5em 2em .55em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-border-radius: .5em;
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	margin-left: 5px;
+}
+
+.taskCheck{
+	width:100%;
+	height:35px;
+	line-height:35px;
+}
+.taskCheck span {
+	color:rgb(64, 92, 96);
+	float:right;
+	margin-right: 20px;
+}
+.task_list{
+	width:100%;
+	height:auto;
+	margin: 0;
+}
+
+#taskListTable1,#taskListTable2{
+	border: 1px solid #D7D7D7;
+}
+#taskListTable1 tr th,#taskListTable2 tr th{
+	font-family: "Microsoft YaHei", "SimHei", "Arial";
+	background: rgb(228, 228, 228);
+	height:35px;
+	font-size: 14px;
+	font-weight: bold;
+	color:#333;
+	padding-left:10px;
+	/* border: 1px solid #D7D7D7;
+	border-style: none none solid none; */
+}
+#taskListTable1 tr td, #taskListTable2 tr td{
+	height:20px;
+	padding:0px 10px;
+	font-size: 12px;
+	color:#000000;
+	border-bottom: 1px solid #D7D7D7;
+	table-layout: auto;
+	word-break: break-all;
+	white-space: normal;
+}
+.title{
+	position: relative;
+	top:-8px;
+	vertical-align: middle;
+	display: table-row-group;
+}
+.arrow{
+	width:26px;
+	height:26px;
+}
+.detail-tr{
+	background: #C1E1F1;
+	display: none;
+}
+.detail_items{
+	font-size:9pt;
+	margin-left: 8%;
+}
+.detail_items span{
+	display:inline-block;
+	width:80px;
+	/* 	text-align: right; */
+}
+
+#arrow_show3 {
+	display: none;
+}
+
+/**tab页**/
+#tab_content{width:398px; height:auto; border:1px solid #999; background:#FFF; overflow:hidden;}
+#tab1,#tab2{width:100%; height:auto;}
+
+#progressbar{
+	border: 1px solid #A3A3A3;
+	background-color: #FFFFFF;
+	width: 250px;
+	height: 20px;
+}
+
+#progressbar span{
+	background-color: #0CA5DB;
+	width: 250px;
+	height: 20px;
+	overflow: hidden;
+	position: absolute;
+}
+
+#progressbar em{
+	background-color: #FFFFFF;
+	width: 250px;
+	height: 20px;
+	position: absolute;
+	display: block;
+	z-index: 1000;
+}
+
+.searchbox{
+	font-size: 11px;
+	padding: 10px 0px;
+	text-align: center;
+}
+.searchbox input[type="search"]{
+	padding: 6px 10px 6px 6px;
+	border: 1px solid rgb(178, 178, 178);
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing : content-box;
+	box-sizing : content-box;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	-moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+
+.search_box {
+	width: 220px;
+	height:auto;
+	border: 1px solid rgb(178, 178, 178);
+	background: #FFFFFF;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	position: relative;
+	box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.search_box input[type='search'] {
+	float: left;
+	border: 0;
+	padding:0 5px;
+	width: 180px;
+	height: 28px;
+	background: none;
+	font-size: 12px;
+	box-shadow: 0px 0px 0px 0px;
+	line-height:28px;
+}
+.search_input{
+	width:180px;
+	float: left;
+}
+.search_btn{
+	float:right;
+}
+.search input[type='search']:focus {
+	outline: none;
+}
+.search{
+	float: right;
+	background: url(../../images/common/search_icon.png) no-repeat center;
+	width: 28px;
+	height: 28px;
+	display: block;
+	cursor: pointer;
+	border: none;
+	margin: 2px 2px 0 0;
+}
+.keyword{
+	width:150px;
+	height:26px;
+	padding: 0px 6px;
+	border: 1px solid rgb(178, 178, 178);
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing : content-box;
+	box-sizing : content-box;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	-moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+
+.status_sel,option{
+	width:100px;
+	/*height:30px;*/
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	text-align: left;
+}
+
+.detail{
+	cursor: pointer;
+}
+
+pre{
+	white-space: pre-wrap; /* css-3 */
+	white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+	white-space: -pre-wrap; /* Opera 4-6 */
+	white-space: -o-pre-wrap; /* Opera 7 */
+}
+pre{
+	*word-break: break-all; /* Internet Explorer 7.0+ */
+	*word-wrap: break-word; /* Internet Explorer 7.0+ */
+	_word-break: break-all; /* Internet Explorer 6.0- */
+	_word-wrap: break-word; /* Internet Explorer 6.0- */
+}
+
+
+.tabContent {
+	float: left;
+	width: 98%;
+	height: 500px;
+}
+
+.ActionItem{
+	text-decoration:underline;
+	padding: 1px 6px;
+	cursor: pointer;
+	color: blue;
+}
+.TableColTitleText {
+	/*font-weight: bold;*/
+}
+
+tr th {
+	background:rgb(228, 228, 228);
+	font-size: 14px;
+	font-weight:bold;
+	color: #333;
+	height: 46px;
+	text-align: center;
+}
+
+tr td {
+	font-size:14px;
+	font-weight:normal;
+	height:46px;
+	text-align:center;
+	border-bottom:1px solid #D7D7D7;
+}
+
+.subtable tr th, td {
+	text-align: center;
+}
+
+.tblcol2 tr td
+{
+	border-bottom: 0;
+}
+
+
+#logtab{
+	position: relative;
+	font-family: "黑体";
+}
+
+#logtab .tabbable{
+	height: 40 px;
+}
+
+#logtab ul{
+	display: table;
+	margin-left:20%;
+}
+
+#logtab li.active{
+	/*height: 40px;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#04305b,endColorStr=#04305b);
+    background:-moz-linear-gradient(top,#04305b,#04305b);
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#04305b), to(#04305b));
+    /*background: url(../../images/tab.png) repeat-x;*/
+	z-index: 1;
+	padding: 0px 6px;
+	margin: 5px 0px 8px 0px;
+
+	background-color:#04305b;
+	-webkit-appearance: textfield;
+
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing : content-box;
+	box-sizing : content-box;
+
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+
+}
+
+#logtab li{
+	display: inline-block;
+	border-right: none;
+	border-bottom: none;
+	border-left: none;
+}
+
+#logtab >ul > li.active > a:hover, #logtab >ul > li > a:hover{
+	background: none;
+}
+
+#logtab li a{
+	color: #FFFFFF;
+	padding: 5px 35px;
+	display: block;
+	line-height: 20px;
+	font-size: 14px;
+	text-align: center;
+	cursor: pointer;
+}
+
+#logtab #tb2{
+	position: relative;
+}
+
+#logtab #tb1{
+	position: relative;
+}
+
+#logtab #tbspace{
+	position: relative;
+	width: 20%;
+}
+
+.export-btn {
+	cursor: pointer;
+}
+
+.dialog-btns-center {
+	/*border-top:1px solid #D7D7D7;*/
+	text-align:center;
+	height:28px;
+	font-size:13px;
+	padding:19px 25px 18px 0px;
+}
+
+.dialog-btns-center .action-btn a{
+	cursor:pointer;
+}
+
+.dialog-btns-center .action-btn a:hover{
+	cursor:pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

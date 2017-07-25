@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+        version="2.1">
+
+    <tlib-version>1.0</tlib-version>
+    <short-name>utils</short-name>
+    <tag>
+        <description>
+            A truncate tag to truncate the givens string with rules.
+        </description>
+        <name>truncate</name>
+        <tag-class>com.arcsoft.supervisor.commons.jsp.tag.utils.TruncateTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <description>
+                The string to be truncated.
+            </description>
+            <name>value</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>
+                The max length limit.Do substring on value if the length of value is greater than max length.
+            </description>
+            <name>maxLength</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>
+                The start index of value to be truncate.
+            </description>
+            <name>start</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <description>
+                The end index of value to be truncate.
+            </description>
+            <name>end</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <description>
+                The string to be append to the truncated value.
+            </description>
+            <name>append</name>
+            <required>false</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <name>js</name>
+        <tag-class>com.arcsoft.supervisor.commons.jsp.tag.utils.resource.JavaScriptTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <description>The virtual path of javascript file. Multiple file can use separatorChars to split.</description>
+            <name>path</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>
+                The separator character of path
+            </description>
+            <name>separatorChars</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <description>
+                A prefix will append to the file path.Defaults is /WEB-INF
+            </description>
+            <name>pathPrefix</name>
+            <required>false</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <name>css</name>
+        <tag-class>com.arcsoft.supervisor.commons.jsp.tag.utils.resource.CssTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <description>The virtual path of css file. Multiple file can use separatorChars to split.</description>
+            <name>path</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>
+                The separator character of path
+            </description>
+            <name>separatorChars</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <description>
+                A prefix will append to the file path.Defaults is /WEB-INF
+            </description>
+            <name>pathPrefix</name>
+            <required>false</required>
+        </attribute>
+    </tag>
+
+
+</taglib>

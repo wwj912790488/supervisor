@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	http://www.springframework.org/schema/util
+	http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+
+    <!-- Defines beans associated to sartf profile. -->
+
+    <bean id="userRelatedComposeStreamTaskProcessor"
+          class="com.arcsoft.supervisor.agent.service.task.processor.UserRelatedIPStreamComposeTaskTaskProcessor"
+          parent="abstractTranscoderProcessorSupport"/>
+
+    <!-- Defines processor mapping -->
+    <util:map id="taskProcessorMap" key-type="com.arcsoft.supervisor.model.vo.task.TaskType">
+        <entry key="IP_STREAM_COMPOSE" value-ref="ipComposeStreamTaskProcessor"/>
+        <entry key="RTSP" value-ref="rtspTaskProcessor"/>
+        <entry key="CONTENT_DETECT" value-ref="contentDetectTaskProcessor"/>
+        <entry key="SDI_STREAM_COMPOSE" value-ref="sdiComposeStreamTaskProcessor"/>
+        <entry key="USER_RELATED_COMPOSE" value-ref="userRelatedComposeStreamTaskProcessor"/>
+    </util:map>
+
+    <bean id="taskStateChangeFactory"
+          class="com.arcsoft.supervisor.agent.service.task.converter.SartfTaskStateChangeFactory"/>
+
+</beans>

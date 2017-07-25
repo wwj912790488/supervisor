@@ -1,0 +1,24 @@
+@CHARSET "UTF-8";
+.errorBox{
+	width:98%;
+	height:auto;
+ 	text-align: left;
+	margin: 0;
+	padding: 0;
+	margin: 0 auto;
+	font-family: "Trebuchet MS","Myriad Pro",Arial,sans-serif;
+	margin-top:30px;
+}
+.message{
+	color: rgb(104,171,194);
+	text-align: center;
+	font-style: italic;
+	font-size: 18px;
+	font-weight: 800;
+	text-shadow: 1px 1px 1px rgb(0,0,0);
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+	padding-bottom:20px;
+}
+#bottom .bottom_link{
+	text-align: center;
+}

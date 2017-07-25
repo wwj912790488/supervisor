@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="configTemplate" type="ConfigTemplate">
+    </xs:element>
+
+
+    <xs:complexType name="ConfigTemplate">
+    	<xs:sequence>
+    		<xs:element name="totalWidth" type="xs:integer"></xs:element>
+    		<xs:element name="totalHeight" type="xs:integer"></xs:element>
+
+    		<xs:element name="cells">
+    			<xs:complexType>
+    				<xs:sequence>
+    					<xs:element name="cell" type="Cell" minOccurs="1" maxOccurs="unbounded"></xs:element>
+    				</xs:sequence>
+    			</xs:complexType>
+    		</xs:element>
+    	</xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="Cell">
+    	<xs:sequence>
+    		<xs:element name="index" type="xs:integer"></xs:element>
+    		<xs:element name="xPos" type="xs:integer"></xs:element>
+    		<xs:element name="yPos" type="xs:integer"></xs:element>
+    		<xs:element name="width" type="xs:integer"></xs:element>
+    		<xs:element name="height" type="xs:integer"></xs:element>
+    	</xs:sequence>
+    </xs:complexType>
+</xs:schema>

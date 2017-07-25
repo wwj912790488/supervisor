@@ -1,0 +1,113 @@
+.warning-content {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.warning-content .form {
+    width: 700px;
+    margin: 30px auto 0;
+}
+
+.form > p {
+    padding-bottom: 10px;
+    clear: both;
+}
+
+.form > p, .form > p > label, .form > p > input {
+    height: 30px;
+    line-height: 30px;
+}
+
+.form > p > label {
+    float: left;
+    width: 100px;
+    display: inline-block;
+    text-align: right;
+}
+
+.form > p > input {
+    float: left;
+    display: inline-block;
+    text-align: left;
+}
+
+.form > p .input {
+    padding: 0 5px;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    border: 1px solid rgb(178, 178, 178);
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+    box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+}
+
+.form > .input-remark {
+    display: block;
+    position: relative;
+    left: 100px;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+#sms-content #url {
+    width: 300px;
+}
+
+#sms-content #phone-num, #voice-form #ip {
+    width: 240px;
+}
+
+.warning-content #save-btn {
+    padding-top: 20px;
+}
+
+.warning-table-tile {
+    text-align: right;
+    width: 100px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.selectItem {
+    padding-top: 20px;
+}
+
+.selectItem >ul>li {
+    padding-left: 10px;
+    float: left;
+}
+
+.mycheck {
+    vertical-align:middle;
+}
+.TypeClass{
+    font-size: 13px;
+}
+.action-bar {
+    height: 45px;
+    background-color: #254f79;
+}
+
+#ops-list-table {
+    width: 100%;
+}
+
+tr th {
+    background:rgb(228, 228, 228);
+    font-size: 14px;
+    font-weight:bold;
+    color: #333;
+    height: 36px;
+    text-align:center;
+}
+
+tr td {
+    font-size:14px;
+    font-weight:normal;
+    height:46px;
+    border-bottom:1px solid #D7D7D7;
+    text-align:center;
+
+}

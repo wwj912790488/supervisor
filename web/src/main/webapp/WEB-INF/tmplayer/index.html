@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="image/x-icon" rel="shortcut icon" href="img/TMPlayer.ico" />
+<link href="img/main.css" type="text/css" rel="stylesheet" />
+<script language="javascript" src="TMPScript.js" type="text/javascript"></script>
+<script language="javascript" type="text/javascript">
+function changeimg(thisimg, num)
+{
+	if (num == 1)
+		thisimg.src='img/button/embed-focus.gif';
+	if (num == 2)
+		thisimg.src='img/button/email-focus.gif';
+	if (num == 3)
+		thisimg.src='img/button/send-focus.gif';
+}
+function resumeimg(thisimg, num)
+{
+	if (num == 1)
+		thisimg.src='img/button/embed_normal.gif';
+	if (num == 2)
+		thisimg.src='img/button/email_normal.gif';
+	if (num == 3)
+		thisimg.src='img/button/send_normal.gif';
+}
+
+function showplay(num)
+{
+	var snapid = "snapshot" + num;
+	document.getElementById(snapid).style.visibility="visible";
+}
+function showno(num)
+{
+	var snapid = "snapshot" + num;
+	document.getElementById(snapid).style.visibility="hidden";
+}
+
+</script>
+
+<style type="text/css">
+#playdes p{line-height:15px;}
+</style>
+<title>demo</title>
+</head>
+<body onload="">
+<div id="container">
+	<div id="header">
+	<p>ArcSoft TotalMedia Player</p>
+	</div>
+	<div id="content">
+		<div id="contentplayer">
+			<div id="playerheader">
+			</div>
+			<div id="playerwrap">
+				<div id="playmore">
+					<ul>
+						<li><a id="buttonembed" href="#"><img onmouseover="changeimg(this,1)" onmouseout="resumeimg(this,1)" src="img/button/embed_normal.gif" /></a></li>
+						<li><a id="buttonemail" href="#"><img onmouseover="changeimg(this,2)" onmouseout="resumeimg(this,2)" src="img/button/email_normal.gif" /></a></li>
+						<li><a id="buttonsend" href="#"><img onmouseover="changeimg(this,3)" onmouseout="resumeimg(this,3)" src="img/button/send_normal.gif" /></a></li>
+					</ul>
+				</div>
+				<div id="playerui">
+					<div id="divTMTNE">
+						<script type="text/javascript" language="javascript">WelcomeTMPlayer(480,360);</script>
+					</div>
+				</div>
+				<div id="playdes">
+				<p>Welcome to this demo page. Please install "ArcSoft TotalMedia Player" before playing back the video content. 
+				If you choose "Or directly click here to install ArcSoft TotalMedia Player.", it is strongly recommended to run installer(TMPSetup.exe) as Administrator after saving to the local storage. 
+                You may uninstall it anytime by getting in "Programs and Features" on "Windows Control Panel" and double clicking "ArcSoft Media Player Plugin".
+				</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer" class="yn-fix-float">
+		<div id="footerleft">
+		</div>
+		<div id="footermain">
+			<p class="coinfo">About ArcSoft<br />ArcSoft, Inc. is an industry leading software developer of multimedia technologies and applications across desktop and embedded platforms. Working closely with major OEM manufacturers, ArcSoft offers a full line of imaging and video solutions that enhance the features, performance, and user experience of mobile phones, digital cameras, optical drives, personal computers, and consumer electronics devices. For further details, visit www.arcsoft.com.</p>
+			<p class="coother"><b/>Copyright © ArcSoft Inc. 2014</p>
+		</div>
+		<div id="footerright">
+		</div>
+	</div>	
+</div>
+</body>
+</html>

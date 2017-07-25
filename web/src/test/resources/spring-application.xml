@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+		http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa-1.3.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+
+    <context:property-placeholder location="classpath:database.properties"/>
+
+    <context:annotation-config/>
+    <context:component-scan base-package="com.arcsoft.supervisor"/>
+    <jpa:repositories base-package="com.arcsoft.supervisor"/>
+    <bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+        <property name="poolName" value="spring-hikari"/>
+        <property name="connectionTestQuery" value="SELECT 1"/>
+        <property name="dataSourceClassName" value="${jdbc.driverClass}"/>
+        <property name="dataSourceProperties">
+            <props>
+                <prop key="url">${jdbc.url}</prop>
+                <prop key="user">${jdbc.username}</prop>
+                <prop key="password">${jdbc.password}</prop>
+            </props>
+        </property>
+        <property name="idleTimeout" value="${hikari.maxIdleTime}"/>
+        <property name="maximumPoolSize" value="${hikari.maxPoolSize}"/>
+    </bean>
+
+    <bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+        <constructor-arg ref="hikariConfig"/>
+    </bean>
+
+    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <property name="persistenceUnitPostProcessors">
+            <bean class="com.arcsoft.supervisor.commons.spring.ProfileScanningPersistenceUnitPostProcessor"/>
+        </property>
+        <property name="dataSource" ref="dataSource"/>
+        <property name="packagesToScan" value="com.arcsoft.supervisor.model.domain.*"/>
+        <property name="jpaVendorAdapter">
+            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"/>
+        </property>
+        <property name="jpaProperties">
+            <props>
+                <prop key="hibernate.dialect">${hibernate.dialect}</prop>
+                <prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+                <prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+                <prop key="hibernate.format_sql">${hibernate.format_sql}</prop>
+                <prop key="hibernate.hbm2ddl.import_files_sql_extractor">org.hibernate.tool.hbm2ddl.MultipleLinesSqlCommandExtractor</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager"
+          p:entityManagerFactory-ref="entityManagerFactory"/>
+
+    <bean id="persistenceExceptionTranslationPostProcessor"
+          class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
+
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="create*" propagation="REQUIRED"/>
+            <tx:method name="insert*" propagation="REQUIRED"/>
+            <tx:method name="save*" propagation="REQUIRED"/>
+            <tx:method name="update*" propagation="REQUIRED"/>
+            <tx:method name="delete*" propagation="REQUIRED"/>
+            <tx:method name="add*" propagation="REQUIRED"/>
+            <tx:method name="remove*" propagation="REQUIRED"/>
+            <tx:method name="append*" propagation="REQUIRED"/>
+            <tx:method name="register*" propagation="REQUIRED"/>
+            <tx:method name="unRegisterAccount" propagation="REQUIRED"/>
+            <tx:method name="*" read-only="true"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true"/>
+
+    <aop:config proxy-target-class="true">
+        <aop:pointcut expression="target(com.arcsoft.supervisor.service.TransactionSupport)" id="txPointcut"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut"/>
+    </aop:config>
+
+
+    <!-- Default transaction template to manual control transaction -->
+    <bean id="defaultTransactionTemplate" class="org.springframework.transaction.support.TransactionTemplate"
+          p:transactionManager-ref="transactionManager"/>
+
+    <bean id="defaultSessionTemplate" class="com.arcsoft.supervisor.commons.spring.DefaultSpringSessionTemplate"
+          p:entityManagerFactory-ref="entityManagerFactory"/>
+
+    <bean id="eventManager" class="com.arcsoft.supervisor.commons.spring.event.DefaultEventManager"/>
+
+    <bean id="systemSettings" class="com.arcsoft.supervisor.model.domain.system.SystemSettings"/>
+
+    <bean id="freemarkerService" class="com.arcsoft.supervisor.commons.freemarker.SpringFreemarkerServiceImpl"/>
+
+    <bean id="storagePersistenceInDbRepository"
+          class="com.arcsoft.supervisor.repository.settings.impl.StoragePersistenceInDbRepositoryImpl"/>
+
+    <bean id="storageMountRepository"
+          class="com.arcsoft.supervisor.repository.settings.impl.StorageMountRepositoryImplRHEL"
+          p:mountBaseDir="/mnt/data/remote"/>
+
+    <bean id="storageTarget" class="com.arcsoft.supervisor.service.settings.impl.LocalStorageServiceImpl"
+          init-method="initialize"
+          p:persistenceRepository-ref="storagePersistenceInDbRepository"
+          p:mountRepository-ref="storageMountRepository"/>
+
+    <bean id="storageService" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean"
+          p:transactionManager-ref="transactionManager"
+          p:target-ref="storageTarget">
+        <property name="transactionAttributes">
+            <props>
+                <prop key="mountStorage">PROPAGATION_REQUIRED</prop>
+                <prop key="addRemoteStorage">PROPAGATION_REQUIRED</prop>
+                <prop key="delRemoteStorage">PROPAGATION_REQUIRED</prop>
+                <prop key="updateStorage">PROPAGATION_REQUIRED</prop>
+                <prop key="findAllRemoteStorages">PROPAGATION_REQUIRED,readOnly</prop>
+                <prop key="getRemoteStorage">PROPAGATION_REQUIRED,readOnly</prop>
+                <prop key="getRemoteStorageByName">PROPAGATION_REQUIRED,readOnly</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- Defines audit relevant beans -->
+    <util:properties id="auditFormatExpressionProperties" location="classpath:audit-format-expression.properties"/>
+
+    <bean id="expressionParser" class="org.springframework.expression.spel.standard.SpelExpressionParser"/>
+
+    <bean id="parserContext" class="org.springframework.expression.common.TemplateParserContext">
+        <constructor-arg index="0" value="${" type="java.lang.String"/>
+        <constructor-arg index="1" value="}" type="java.lang.String"/>
+    </bean>
+
+    <beans profile="production">
+        <util:map id="taskProcessorMap" key-type="com.arcsoft.supervisor.model.vo.task.TaskType">
+            <entry key="IP_STREAM_COMPOSE" value-ref="ipComposeStreamTaskProcessor"/>
+            <entry key="RTSP" value-ref="rtspTaskProcessor"/>
+            <entry key="CONTENT_DETECT" value-ref="contentDetectTaskProcessor"/>
+            <entry key="SDI_STREAM_COMPOSE" value-ref="sdiComposeStreamTaskProcessor"/>
+        </util:map>
+    </beans>
+
+    <beans profile="sartf">
+        <util:map id="taskProcessorMap" key-type="com.arcsoft.supervisor.model.vo.task.TaskType">
+            <entry key="IP_STREAM_COMPOSE" value-ref="ipComposeStreamTaskProcessor"/>
+            <entry key="RTSP" value-ref="rtspTaskProcessor"/>
+            <entry key="CONTENT_DETECT" value-ref="contentDetectTaskProcessor"/>
+            <entry key="SDI_STREAM_COMPOSE" value-ref="sdiComposeStreamTaskProcessor"/>
+            <entry key="USER_RELATED_COMPOSE" value-ref="userRelatedIpComposeStreamTaskProcessor"/>
+        </util:map>
+    </beans>
+
+
+</beans>

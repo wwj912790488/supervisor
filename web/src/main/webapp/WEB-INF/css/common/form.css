@@ -1,0 +1,17 @@
+.form-container {
+	width:476px;
+}
+.form-header {
+	width: 476px;
+	height: 126px;
+	background: url(../images/form-header-bg.png);
+}
+.form-content {
+	padding:0 21px;
+	background: url(../images/form-content-bg.png);
+}
+.form-footer {
+	width: 476px;
+	height: 50px;
+	background: url(../images/form-footer-bg.png);
+}

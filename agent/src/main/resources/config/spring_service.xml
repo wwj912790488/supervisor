@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	http://www.springframework.org/schema/util
+	http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+
+    <!-- Override spring default PropertyPlaceholderConfigurer to add expression in value of properties. -->
+    <bean class="com.arcsoft.supervisor.agent.config.AgentPropertyPlaceholderConfigurer"/>
+
+    <bean id="agentService" name="remoteExecutorService, ethSettingsListener"
+          class="com.arcsoft.supervisor.agent.service.agent.impl.CoreAgentServiceImpl"
+          init-method="init"
+          destroy-method="destroy"
+          p:taskManager-ref="taskManager"
+          p:sdiService-ref="sdiService"
+          p:heartBeatSenderListener-ref="agentHeartBeatSenderListener">
+        <property name="actionHandlers">
+            <list>
+                <ref bean="taskManager"/>
+                <ref bean="sdiService"/>
+                <ref bean="storageService"/>
+                <ref bean="dnsService"/>
+                <ref bean="hostService"/>
+                <ref bean="ethService"/>
+                <ref bean="routeService"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="agentHeartBeatSenderListener" class="com.arcsoft.supervisor.agent.service.agent.impl.AgentHeartBeatSenderListener"
+            p:componentService-ref="componentService"/>
+
+    <bean id="remoteExecutorServiceSupport"
+          class="com.arcsoft.supervisor.agent.service.remote.RemoteExecutorServiceSupport"
+          abstract="true"
+          p:remoteExecutorService-ref="remoteExecutorService"
+            />
+
+    <!-- for content detect config -->
+    <bean id="contentServerInfo" class="com.arcsoft.supervisor.cd.data.ContentServerInfo"
+          p:ip="127.0.0.1"
+          p:listenPort="9080"
+          p:startPort="30000"
+          p:processNum="0"
+          p:checkResultListener-ref="defaultContentDetectResultListener"/>
+
+    <bean id="mediaCheckerApp" class="com.arcsoft.supervisor.cd.MediaCheckerApp"
+          p:contentServerInfo-ref="contentServerInfo"/>
+
+    <bean id="transcoder" class="com.arcsoft.supervisor.transcoder.spi.single.ThreadTrackBasedTranscoder"
+          p:ITranscodingStatusListener-ref="transcodingStatusListener"
+          p:ITranscodingMessageListener-ref="transcodingMessageListener"/>
+
+    <bean id="rtspStreamFileResourceManager"
+          class="com.arcsoft.supervisor.agent.service.task.resource.DefaultRtspStreamFileResourceManager"/>
+
+    <!-- Defines the task processor -->
+    <bean id="abstractTranscoderProcessorSupport"
+          class="com.arcsoft.supervisor.agent.service.task.support.AbstractTranscoderTaskProcessorSupport"
+          abstract="true"
+          p:agentService-ref="agentService"
+          p:rtspStreamFileResourceManager-ref="rtspStreamFileResourceManager"
+          p:transcoder-ref="transcoder"
+          p:contentServerInfo-ref="contentServerInfo"/>
+
+    <bean id="ipComposeStreamTaskProcessor"
+          class="com.arcsoft.supervisor.agent.service.task.processor.IPStreamComposeTaskTaskProcessorTaskProcessorSupport"
+          parent="abstractTranscoderProcessorSupport"/>
+
+    <bean id="sdiComposeStreamTaskProcessor"
+          class="com.arcsoft.supervisor.agent.service.task.processor.SDIStreamComposeTaskTaskProcessor"
+          parent="abstractTranscoderProcessorSupport"/>
+
+    <bean id="rtspTaskProcessor" class="com.arcsoft.supervisor.agent.service.task.processor.RtspTaskProcessor"
+          parent="abstractTranscoderProcessorSupport"/>
+
+    <bean id="contentDetectTaskProcessor"
+          class="com.arcsoft.supervisor.agent.service.task.processor.ContentDetectTaskTaskProcessor"
+          p:mediaCheckerApp-ref="mediaCheckerApp"/>
+
+    <!-- Defines AlertMessage filter -->
+    <bean id="errorCodeAlertMessageFilter" class="com.arcsoft.supervisor.agent.service.task.filter.ErrorCodeAlertMessageFilter"/>
+
+    <util:list id="alertMessageFilters" value-type="com.arcsoft.supervisor.agent.service.task.AlertMessageFilter">
+        <ref bean="errorCodeAlertMessageFilter"/>
+    </util:list>
+
+    <bean id="taskManager"
+          name="defaultContentDetectResultListener, transcodingStatusListener, transcodingMessageListener"
+          class="com.arcsoft.supervisor.agent.service.task.impl.DefaultTaskManagerImpl"
+          p:remoteExecutorService-ref="remoteExecutorService"
+          p:transcoder-ref="transcoder"
+          p:taskProcessor-ref="taskProcessorMap"
+          p:mediaCheckerApp-ref="mediaCheckerApp"
+          p:streamFileResourceManager-ref="rtspStreamFileResourceManager"
+          p:agentService-ref="agentService"
+          p:stateChangeFactory-ref="taskStateChangeFactory"
+          p:alertMessageFilters-ref="alertMessageFilters"/>
+
+    <bean id="sdiService"
+          class="com.arcsoft.supervisor.agent.service.settings.SDIService"
+          p:sdiReporter-ref="agentService"
+          p:localSDIService-ref="localSDIService"/>
+
+    <bean id="componentService"
+          class="com.arcsoft.supervisor.agent.service.settings.ComponentService"
+          p:reporter-ref="agentService"
+          p:localComponentService-ref="localComponentService"/>
+
+
+    <bean id="persistRepository"
+          class="com.arcsoft.supervisor.repository.settings.impl.StoragePersistenceXMLRepositoryImpl"
+          init-method="initialize"
+          p:path="${storage.persistence.path}"
+            >
+    </bean>
+
+    <bean id="mountRepository"
+          class="com.arcsoft.supervisor.repository.settings.impl.StorageMountRepositoryImplRHEL"
+          p:mountBaseDir="${storage.mount.dir}"
+            />
+
+    <bean id="storageService"
+          class="com.arcsoft.supervisor.agent.service.settings.StorageService"
+          p:localStorageService-ref="localStorageService"
+            />
+
+    <bean id="localStorageService"
+          class="com.arcsoft.supervisor.service.settings.impl.LocalStorageServiceImpl"
+          init-method="initialize"
+          p:mountRepository-ref="mountRepository"
+          p:persistenceRepository-ref="persistRepository"
+            />
+
+    <bean id="localSDIService"
+          class="com.arcsoft.supervisor.service.settings.impl.LocalSDIServiceImpl"
+            />
+
+    <bean id="ethRepository"
+          class="com.arcsoft.supervisor.repository.settings.impl.EthRepositoryImplRHEL"/>
+
+    <bean id="localComponentService"
+          class="com.arcsoft.supervisor.service.settings.impl.LocalComponentServiceImpl"
+          p:ethRepository-ref="ethRepository"/>
+
+    <!--&lt;!&ndash; settings &ndash;&gt;-->
+    <!--<bean id="dateTimeService"-->
+    <!--class="com.arcsoft.supervisor.agent.service.settings.DateTimeService"-->
+    <!--p:localDateTimeService-ref="localDateTimeService"-->
+    <!--/>-->
+
+    <!--<bean id="localDateTimeService"-->
+    <!--class="com.arcsoft.supervisor.service.settings.impl.LocalDateTimeServiceImpl"-->
+    <!--p:timeDao-ref="timeDao"-->
+    <!--/>-->
+
+    <bean id="dnsRepositoryImplRHEL" class="com.arcsoft.supervisor.repository.settings.impl.DnsRepositoryImplRHEL"/>
+
+    <bean id="localDNSService" class="com.arcsoft.supervisor.service.settings.impl.LocalDNSServiceImpl"
+          p:dnsRepository-ref="dnsRepositoryImplRHEL"/>
+
+    <bean id="dnsService"
+          class="com.arcsoft.supervisor.agent.service.settings.DNSService"
+          p:localDNSService-ref="localDNSService"/>
+
+
+    <bean id="localEthService" class="com.arcsoft.supervisor.service.settings.impl.LocalEthServiceImpl"
+          p:ethRepository-ref="ethRepository"/>
+
+    <bean id="ethService"
+          class="com.arcsoft.supervisor.agent.service.settings.EthService"
+          init-method="init"
+          p:ethSettingsListener-ref="ethSettingsListener"
+          p:localEthService-ref="localEthService"
+            />
+
+
+    <!--<bean id="firewallService"-->
+    <!--class="com.arcsoft.supervisor.agent.service.settings.FirewallService"-->
+    <!--p:localFirewallService-ref="localFirewallService"-->
+    <!--/>-->
+
+    <!--<bean id="localFirewallService"-->
+    <!--class="com.arcsoft.supervisor.service.settings.impl.LocalFirewallServiceImpl"-->
+    <!--p:firewallDao-ref="firewallDao"-->
+    <!--/>-->
+
+    <bean id="hostRepositoryImplRHEL" class="com.arcsoft.supervisor.repository.settings.impl.HostRepositoryImplRHEL"/>
+
+    <bean id="localHostService" class="com.arcsoft.supervisor.service.settings.impl.LocalHostServiceImpl"
+          p:hostRepository-ref="hostRepositoryImplRHEL"/>
+
+    <bean id="hostService"
+          class="com.arcsoft.supervisor.agent.service.settings.HostService"
+          p:localHostService-ref="localHostService"/>
+
+
+    <bean id="routeRepositoryImplRHEL" class="com.arcsoft.supervisor.repository.settings.impl.RouteRepositoryImplRHEL"/>
+
+    <bean id="localRouteService" class="com.arcsoft.supervisor.service.settings.impl.LocalRouteServiceImpl"
+          p:routeRepository-ref="routeRepositoryImplRHEL"/>
+
+    <bean id="routeService"
+          class="com.arcsoft.supervisor.agent.service.settings.RouteService"
+          p:localRouteService-ref="localRouteService"
+            />
+
+    <!-- Load beans associated to profile -->
+    <import resource="classpath*:config/spring-snippets/spring_service.xml"/>
+
+</beans>

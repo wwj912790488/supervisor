@@ -1,0 +1,35 @@
+#opsList-filter {
+    margin: 5px 20px;
+}
+
+#opsList-filter span, #opsList-filter input {
+    margin: 0px 10px 0px 0px;
+}
+
+#opsList-filter input[type='checkbox'] {
+    vertical-align: bottom;
+}
+
+#opslist-container {
+    max-height: 200px;
+    overflow: auto;
+    margin:0px 10px 0px 20px;
+}
+
+.ops-item {
+    display: inline-block;
+    width: 230px;
+    margin: 5px 0px;
+}
+
+.ops-item input[type='checkbox']{
+    vertical-align: bottom
+}
+
+.ops-item span {
+    display: inline-block;
+    width: 200px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

@@ -1,0 +1,43 @@
+.container {
+	padding-top:200px;
+}
+
+#login-dialog, #register-dialog {
+	width:500px;
+	margin:0px auto;
+	background-color:#fff;
+}
+
+.dialog-btns {
+	border-top:1px solid #D7D7D7;
+	text-align:right;
+	height:28px;
+	font-size:13px;
+	padding:19px 25px 18px 0px;
+}
+
+.dialog-btns .action-btn a{
+	cursor:pointer;
+}
+
+.dialog-btns .action-btn a:hover{
+	cursor:pointer;
+}
+
+
+.tblcol2 {
+	width: 98%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.tblcol2 .collbl {
+	text-align: right;
+	width: 30%;
+	padding: 10px;
+}
+.tblcol2 .colval {
+	text-align: left;
+	width: 70%;
+	padding: 10px;
+}

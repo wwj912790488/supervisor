@@ -1,0 +1,620 @@
+.add-device {
+	height:28px;
+	margin:7px 0px 5px;
+}
+
+.add-device .action-btn {
+	float:right;
+}
+
+.add-device .btn-text {
+	font-size:15px;
+	margin:0px 12px;
+	line-height:26px;
+}
+
+.add-device .btn-icon {
+	display:inline-block;
+	width : 13px;
+	background: url(../images/common/buttons/add.png) no-repeat 0px 7px;
+	margin:0px 10px;
+}
+
+.device-list {
+	background:#fff;
+}
+
+.device-list .action-bar {
+	height:45px;
+	background-color:#254f79;
+}
+
+.device-list-table {
+	width:100%;
+}
+
+.device-list-table .right-align {
+	text-align:right;
+}
+
+.device-list-table tr th {
+	background:rgb(228, 228, 228);
+	font-size: 14px;
+	font-weight:bold;
+	color: #333;
+	height: 36px;
+	text-align:center;
+}
+
+.device-list-table tr td {
+	font-size:14px;
+	font-weight:normal;
+	height:46px;
+	text-align:center;
+	border-bottom:1px solid #D7D7D7;
+}
+
+.load-cpu {
+	margin-right:20px;
+}
+
+.load-network {
+	margin-left:20px;
+}
+.load-cpu-status {
+	display:inline-block;
+	vertical-align:middle;
+	height:28px;
+	width:28px;
+	background:url(../images/cpu-status.png);
+}
+
+.load-network-status {
+	display:inline-block;
+	vertical-align:middle;
+	height:28px;
+	width:28px;
+	background:url(../images/network-status.png);
+}
+
+.disable .load-network-status {
+	background-position:0px -38px;
+}
+
+.dialog-content {
+	overflow:auto;
+	max-height:600px;
+}
+
+.device-item {
+	height:180px;
+	padding:15px 0px;
+	border-bottom:1px solid #d7d7d7;
+}
+
+.item-select, .item-detail, .device-function-list, .device-function-list li {
+	display:inline-block;
+}
+
+.item-select {
+	width:60px;
+	vertical-align:bottom;
+	margin-bottom:80px;
+}
+
+.item-detail {
+	width:700px;
+}
+
+.device-function-list {
+	width:500px;
+}
+
+.device-function-list li {
+	line-height:25px;
+}
+
+.device-function-list li input[type='checkbox'] {
+	vertical-align:middle;
+	height:18px;
+	width:18px;
+}
+
+.device-details {
+	background-color:#cbd8e5;
+	padding:15px;
+}
+
+.detail-item {
+	float:left;
+	vertical-align:bottom;
+	width:25%;
+}
+
+.detail-title > *{
+	display: inline-block;
+}
+
+.detail-title, .detail-content {
+	text-align:left;
+}
+
+.detail-content {
+	line-height:20px;
+}
+
+.detail-title .icon {
+	width:25px;
+	height:25px;
+	padding-bottom:2px;
+	vertical-align:bottom;
+}
+
+.detail-title > span {
+	line-height:30px;
+} 
+
+#cpu-details .icon {
+	background:url(../images/cpu-icon.png) no-repeat;
+}
+
+#gpu-details .icon {
+	background:url(../images/gpu-icon.png) no-repeat;
+}
+
+#network-details .icon {
+	background:url(../images/network-icon.png) no-repeat;
+}
+
+#sdi-details .icon {
+	background:url(../iamges/sdi-icon.png) no-repeat;
+}
+
+
+.device-config-container{
+    width: 750px;height : 500px; margin-top: 20px;
+    padding: 0 20px 20px 20px;
+}
+
+.device-config-container .btn{
+    width: 80px;
+    height: 25px;
+}
+
+ul{list-style-type: none;font-size: 0pt;}
+a{text-decoration: none;}
+.tab-links a {
+    text-align:center;
+    display:inline-block;
+    color:#000;
+    width: 100px;
+    padding: 7px 0;
+    transition:all linear 0.15s;
+    vertical-align: middle;
+}
+
+.tab-links li {
+    display: inline-block;
+    list-style:none;
+    font-size: 12pt;
+}
+
+.tab-links a:hover {
+    background:#a7cce5;
+}
+
+.tab-links li.active a, .tabs li.active a:hover {
+    background:#346ba1;
+    color:#fff;
+}
+
+.nav-parent{
+    height: 30px;
+    border-bottom: 2px solid #346ba1;
+}
+
+/* Hack for chrome */
+/*.nav-parent:not(*:root){*/
+    /*height: 30px;*/
+/*}*/
+
+.nav-child{
+    height: 32px;
+    padding: 7px 0;
+}
+
+.nav-child .tab-links li{
+    font-size: 10pt;
+}
+
+.hidden{
+    display: none;
+}
+
+#content-host-operate div{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.text-right{
+    text-align: right;
+}
+
+#content-host-init{
+    padding: 20px 0;
+}
+
+.host-init-table{
+    margin: auto;
+}
+.host-init-table tr{
+    height: 40px;
+}
+.float-left{
+    float: left;
+}
+
+.eth-items{
+    background: #e8e8e8;
+}
+
+.eth-item{
+    width : 170px;
+    height : 30px;
+    padding : 5px 0;
+    border-bottom : 1px solid #dddddd;
+    cursor : pointer;
+}
+
+.eth-item .left{
+    background : url('../images/eth.png'); width : 31px; height: 30px;
+}
+
+.eth-item .right{
+    text-align: left;font-size: 10pt;padding-top: 4px;
+}
+
+.eth-items .eth-item.active{
+    background: #fff;
+}
+
+.eth-items .eth-item .left.disable{
+    background: url('../images/eth-dis.png');
+}
+
+.ht300{
+    height: 300px;
+}
+
+#container > .content{
+    text-align: center;
+    border:1px solid #d7d7d7;
+    font-size: 10pt;
+    height: 410px;
+}
+
+.content.no-nav{
+    margin-top: 20px;
+    height: 430px;
+}
+
+#content-host-operate{
+    padding-top: 15%;
+}
+
+.dns-items{
+    padding-top: 20px;
+}
+
+.dns span{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.dns .op{
+    position: relative;
+    left: 55px;
+    width: 40px;
+}
+
+.dns.last .op{
+    left: 40px;
+}
+
+.dns.last{
+    padding-top: 8px;
+}
+
+.dns .ip, .dns .ip input{
+    width: 120px;
+}
+
+.dns .ip{
+    position: relative;
+    left: 20px;
+}
+
+.dns .op .addBtn{
+    width: 75px;
+    height: 25px;
+}
+
+#dns-form .dns{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+a.btn-del{
+    background : url('../images/delet_n.png');
+    display : inline-block;
+    width: 40px;
+    height: 40px;
+}
+
+a.btn-del:hover{
+    background : url('../images/delet_p.png');
+}
+
+.route-container{
+    padding: 20px 0;
+}
+
+.route-container .title{
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.route-table{
+    width: 100%;
+    empty-cells: show;
+}
+
+.route-table tr{
+    border-bottom: 1px solid #d7d7d7;
+}
+
+.route-table th, .route-table td{
+    margin: 2px;
+    padding: 2px;
+    text-align: center;
+    height: 40px;
+}
+
+#route-table-container{
+    height: 300px;
+    overflow-y: auto;
+}
+
+#route-add-form-container{
+    padding-top: 20px;
+}
+
+#route-form input{
+    height: 20px;
+}
+
+#route-form #addBtn{
+    height: 25px;
+    width: 50px;
+    margin-left: 10px;
+}
+
+#route-form #route-iface{
+    width: 55px;
+    height: 18px;
+}
+
+#storage-container{
+    height: 400px;
+    padding-top: 10px;
+}
+
+#storage-table-container{
+    height: 260px;
+    overflow-y: auto;
+}
+
+#storage-table-container .storage-table{
+    width: 100%;
+}
+
+#storage-table-container .storage-table td{
+    margin: 2px;
+    padding: 2px;
+    text-align: center;
+}
+
+#storage-table-container .storage-table tr{
+    height: 30px;
+    border-bottom: 1px solid #d7d7d7;
+}
+
+#storage-table-container .storage-table #ops span{
+    padding-left: 2px;
+    cursor: pointer;
+}
+
+#storage-table-container #ops a{
+    color: #1F84CA;
+    cursor: pointer;
+}
+
+#storage-table-container #ops a:hover{
+    color: red;
+}
+
+#storage-form-container{
+    padding: 10px 0;
+}
+
+#storage-form{
+    width: 500px;
+    margin: 0px auto;
+}
+
+#storage-form table{
+    width: 100%;
+}
+
+#storage-form table tr{
+    height: 30px;
+}
+
+#storage-form #path{
+    width: 370px;
+}
+
+/* for config */
+.config-container {
+    margin-top: 10px;
+}
+
+.config-container div {
+    padding: 20px 0 0 0;
+}
+
+.config-container input[type="checkbox"],input[type="radio"]{
+    vertical-align: middle;
+    position: relative;
+    bottom: 1px;
+}
+
+#config-rtsp input, #config-record input{
+    width: 400px;
+}
+
+#config-record input[name='keepTime'], #config-record input[name='profileId'], #config-record input[name='contentDetectKeepTime']{
+    width: 100px;
+}
+
+#config-alarm input{
+    width: 400px;
+}
+
+.info-tip {
+    display: block;
+    position: relative;
+    left: -52px;
+    top: 5px;
+    color: red;
+}
+
+#container-publish-url{
+    padding-top: 5px;
+    position: relative;
+    left: 30px;
+}
+
+#container-publish-url div{
+    padding: 5px 0 0 0;
+}
+
+#container-publish-url .publish-url{
+    text-align: left;
+    margin-left: 155px;
+}
+
+#container-publish-url #del-url{
+    font-size: 2rem;
+    position: relative;
+    top: 2px;
+    left: 3px;
+    cursor: pointer;
+}
+
+.show-tasks{
+    background: url("../images/common/buttons/config.png") no-repeat;
+    background-position: 0px -1px;
+}
+.show-tasks:hover{
+    background: url("../images/common/buttons/config.png") no-repeat;
+    background-position: 0px -39px;
+}
+.show-tasks:active{
+    background: url("../images/common/buttons/config.png") no-repeat;
+    background-position: 0px -38px;
+}
+.disable .show-tasks{
+    color:grey;
+    background: url("../images/common/buttons/config.png") no-repeat;
+    background-position: 0px -77px;
+}
+
+#show-tasks-table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+#show-tasks-table tr {
+    line-height: 20px;
+}
+
+#show-tasks-table td {
+    text-align: center;
+    font-size: 14px;
+}
+
+.show-install{
+    background: url("../images/common/buttons/config.png") no-repeat;
+    background-position: 0px -1px;
+}
+.show-install:hover{
+    background: url("../images/common/buttons/config.png") no-repeat;
+    background-position: 0px -39px;
+}
+.show-install:active{
+    background: url("../images/common/buttons/config.png") no-repeat;
+    background-position: 0px -38px;
+}
+.disable .show-install{
+    color:grey;
+    background: url("../images/common/buttons/config.png") no-repeat;
+    background-position: 0px -77px;
+}
+
+.tabContent {
+    float: left;
+    width: 98%;
+    height: 500px;
+}
+.tblcol2 {
+    width: 98%;
+    margin-top: 50px;
+}
+/*.tblcol2 tr {
+	padding: 2px;
+	margin: 2px;
+}*/
+
+.tblcol2 .collbl {
+    text-align: right;
+    width: 30%;
+    padding: 10px;
+}
+.tblcol2 .colval {
+    text-align: left;
+    width: 70%;
+    padding: 10px;
+}
+
+
+tr th {
+    background:rgb(228, 228, 228);
+    font-size: 14px;
+    font-weight:bold;
+    color: #333;
+    height: 36px;
+    text-align:center;
+}
+
+tr td {
+    font-size:14px;
+    font-weight:normal;
+    height:46px;
+    text-align:center;
+    /*border-bottom:1px solid #D7D7D7;*/
+}
+
+.tblcol2 tr td
+{
+    border-bottom: 0;
+}

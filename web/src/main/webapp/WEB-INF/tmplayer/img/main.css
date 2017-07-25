@@ -1,0 +1,268 @@
+/* CSS Document */
+/************* Global *************/
+html, body {
+	height:100%;
+	font-family:Arial, "黑体";
+}
+
+* {
+	margin:0;
+	padding:0;
+}
+
+a {
+	text-decoration:none;
+	color: #ffffff;	
+}
+
+img 
+{
+	border:none;
+}
+
+.dealinfo a:link {color:#FFFFFF}     /* unvisited link */
+.dealinfo a:visited {color:#FFFFFF}  /* visited link */
+.dealinfo a:hover {color: #FFFFFF; background:url(button/buy_focus.gif);}   /* mouse over link */
+.dealinfo a:active {color: #FFFFFF}   /* selected link */
+li {
+	text-align:left;
+	list-style-type:none;
+}
+
+/************* Container *************/
+#container {
+	background:#FFFFFF;
+	width:800px;
+	margin:0 auto;
+	border:1px solid #000000;	
+}
+
+/************* Header *************/
+#header {
+	height:30px;
+	padding-top:20px;
+
+}
+#header p {
+	text-align:center;
+	font-weight:bold;
+	font-size:15px;
+}
+
+/************* Content *************/
+#content {
+
+}
+
+/************* ContentPlayer *************/
+#contentplayer {
+	height:427px;
+	background:url(background.gif) repeat-x;
+
+}
+#playerheader {
+	clear:both;
+	height:31px;
+	
+}
+#playerwrap{
+	height:360px;
+}
+#playmore {
+	float:left;
+	width:157px;
+}
+#playerui 
+{
+	float:left;
+	width:480px;
+	height:360px;
+}
+#playerui img{
+	height:360px;
+}
+#playdes {
+	float:left;
+	width:163px;
+}
+#playdes p{	
+	margin-top:20px;
+	margin-left:20px;
+	margin-right:20px;
+	text-align:left;
+	font-size:11px;
+}
+#playmore a{
+	display:block;
+	width:71px;
+	height:67px;
+	margin:0 auto;
+	margin-top:30px;
+}
+#playmore #buttonembed{
+	padding-bottom:27px;
+	border-bottom:1px solid #000000;
+}
+#playmore #buttonemail{
+	margin-top:27px;
+	padding-bottom:27px;
+	border-bottom:1px solid #000000;
+}
+#playmore #buttonsend{
+	margin-top:27px;
+}
+
+/************* ContentList  *************/
+#contentlist {
+	clear:both;
+	height:678px;
+	background:url(background_red.gif) no-repeat top;
+
+}
+#subvideo {
+	float:left;
+	width:611px;
+	height:676px;
+}
+#subvideo p.title,.freevideo p.title{
+	text-align:left;
+	font-size:14px;
+	font-weight:bold;
+	height:20px;
+	
+	border-bottom:1px solid #CCCCCC;
+	float:left;
+	margin:30px 0 0 35px;
+}
+.freevideo p.title{
+	padding:0 35px 5px 0;
+	margin:30px 0 0 18px;
+}
+
+#subvideo p.title{
+	padding:0 100px 5px 0;
+}
+.freevideo {
+	float:left;
+	margin-left:23px;
+	width:176px;
+	height:676px;
+}
+.freevideo .snapshot{
+	margin-top:21px;
+	margin-bottom:22px;
+}
+#subvideo table{
+	margin:0 auto;
+}
+#subvideo td{
+	width:285px;
+	height:200px;
+}
+.snapshot {
+	float:left;
+	width:155px;
+	height:156px;
+	position:relative;
+}
+.snapshot a img{
+	margin-top:8px;
+	margin-bottom:2px;
+	border:1px solid #000000;
+}
+.snapshot .play{
+	width:36px;
+	height:31px;
+	z-index:10;
+	visibility:hidden;
+	position:absolute;
+	top:30px;
+	left:58px;
+}
+
+.snapshot p {
+	text-align:left;
+	font-size:10px;
+	background:url(dot.gif) no-repeat 10px 15px;
+	padding-top:10px;
+	padding-left:20px;
+	line-height:17px;
+}.snapshot p strong{font-weight:bold;font-size:12px;}
+.dealinfo {
+	float:left;
+	width:120px;
+	height:156px;
+	font-size:10px;
+}
+.dealinfo a {
+	display:block;
+	background:url(button/buy_normal.gif) no-repeat;
+	width:107px;
+	height:22px;
+}
+.dealinfo li input{
+	float:left;
+	margin-top:10px;
+}
+.dealinfo li p{
+	float:left;
+	margin-left:10px; 
+	line-height:14px;
+}
+.dealinfo li{	
+	height:34px;
+}
+.dealinfo a{
+	font-size:12px;	
+	font-weight:bold;
+	color:#FFFFFF;
+}
+
+/************* Footer *************/
+#footer {
+}
+#footerleft, #footerright {
+	float:left;
+	width:22px;
+	font-size:0;
+	line-height:0;
+	height:128px;
+	background:url(bk_left.gif) no-repeat;
+}
+
+#footermain {
+	float:left;
+	width:756px;
+	height:128px;
+	background:url(bk.gif) repeat-x;
+}
+#footermain p.coinfo{
+	width:720px;
+	text-align:left;
+	font-size:11px;
+	line-height:14px;
+	float:left;
+	margin:12px 20px 0 20px;
+}
+#footermain p.coother{
+	clear:both;
+	text-align:center;
+	font-size:12px;
+	line-height:16px;
+	padding-top:15px;
+}
+
+#footerright {
+	float:left;
+	background:url(bk_right.gif) no-repeat;
+	height:128px;
+}
+
+.yn-fix-float:after 
+{
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}

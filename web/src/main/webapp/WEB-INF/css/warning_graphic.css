@@ -1,0 +1,32 @@
+#channel-graphic {
+	width: 1250px;
+	margin:0px auto;
+}
+
+#channel-timeline {
+	margin-left: 100px;
+}
+
+.channel-item {
+	word-spacing: -3px;
+}
+
+.channel-item .channel-name {
+	display: inline-block;
+    width: 100px;
+    text-align: right;
+    line-height: 30px;
+    vertical-align: bottom;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#channel-select-form {
+    margin: 20px 0px 10px;
+    text-align: center;
+}
+
+.channel-item .channel-canvas {
+	vertical-align: bottom;
+}

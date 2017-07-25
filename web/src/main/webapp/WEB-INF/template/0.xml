@@ -1,0 +1,13 @@
+<configTemplate>
+  <totalWidth>1920</totalWidth>
+  <totalHeight>1080</totalHeight>
+  <cells>
+    <cell>
+      <index>0</index>
+      <xPos>0</xPos>
+      <yPos>0</yPos>
+      <width>1920</width>
+      <height>1080</height>
+    </cell>
+  </cells>
+</configTemplate>

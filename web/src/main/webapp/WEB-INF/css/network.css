@@ -1,0 +1,196 @@
+#interface-setting-options {
+	border:1px solid gray;
+	float:left;
+	width:520px;
+	padding-top:15px;
+}
+.content-wrapper {
+	margin-top:20px; 
+}
+
+#interface-setting-options .label {
+	display:inline-block;
+	width:230px;
+	text-align:right;
+	font-size:15px;
+}
+#interface-setting-options .line {
+	margin:15px 0px;
+}
+.btn-line {
+	margin:30px 0px;
+	text-align:center;
+}
+#interface-list {
+	float:left;
+	width:240px;
+}
+#interface-list .interface-item {
+	border-top:1px solid gray;
+	border-right:1px solid gray;
+	border-bottom:1px solid gray;
+}
+#interface-list .eth-icon {
+	display:inline-block;
+	width:27px;
+	height:50px;
+	background:url("../images/eth.png") no-repeat center center;
+	vertical-align:middle;
+}
+#interface-list .eth-state {
+	display:inline-block;
+	width:21px;
+	height:50px;
+	background:url("../images/light_green.png") no-repeat center center;
+	vertical-align:middle;
+}
+#interface-list .disabled .eth-state {
+	background:url("../images/light_red.png") no-repeat center center;
+}
+#interface-list .eth-name {
+	font-size:13px;
+	vertical-align:middle;
+}
+
+#interface-list .selected .eth-name {
+	font-weight:bold;
+}
+
+#tab-dns-setting {
+	width:400px;
+}
+
+#tab-dns-setting .label {
+	display:inline-block;
+	width:150px;
+	text-align:right;
+	font-size:15px;
+	font-weight:bold;
+}
+
+#tab-dns-setting .line {
+	margin:15px 0px;
+}
+
+#route-table-title {
+	width:100%;
+	text-align:center;
+	font-size:15px;
+	margin-bottom:15px;
+}
+
+#route-table {
+	border:1px solid gray;
+	border-collapse:collapse;
+	empty-cells:show;
+	width:100%;
+}
+
+#route-table td {
+	margin:2px;
+	padding:2px;
+	border:1px solid gray;
+    text-align: center;
+    height: 30px;
+}
+
+#route-table a {
+	cursor:pointer;
+}
+
+#add-route-table {
+	margin-top:30px;
+}
+
+#add-route-table .arg {
+	display:inline-block;
+	vertical-align:bottom;
+}
+
+#add-route-table .arg input,
+#add-route-table .arg select {
+	width:100%;
+}
+
+#add-route-table .label {
+	font-weight:bold;
+}
+
+#logtab{
+	position: relative;
+	font-family: "黑体";
+}
+
+#logtab .tabbable{
+	height: 40px;
+}
+
+#logtab ul{
+	display: table;
+	margin-left:20%;
+}
+
+#logtab li.active{
+	/*height: 40px;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#04305b,endColorStr=#04305b);
+    background:-moz-linear-gradient(top,#04305b,#04305b);
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#04305b), to(#04305b));
+    /*background: url(../../images/tab.png) repeat-x;*/
+	z-index: 1;
+	padding: 0px 6px;
+	margin: 5px 0px 8px 0px;
+
+	background-color:#04305b;
+	-webkit-appearance: textfield;
+
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing : content-box;
+	box-sizing : content-box;
+
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+
+}
+
+#logtab li{
+	display: inline-block;
+	border-right: none;
+	border-bottom: none;
+	border-left: none;
+}
+
+#logtab >ul > li.active > a:hover, #logtab >ul > li > a:hover{
+	background: none;
+}
+
+#logtab li a{
+	color: #FFFFFF;
+	padding: 5px 35px;
+	display: block;
+	line-height: 20px;
+	font-size: 14px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.tab-links .active a{
+    color: #1b84a9;
+}
+
+.tab-links li{
+    padding-top: 5px;
+}
+
+.bg-color{
+    background-color: lightcyan;
+}

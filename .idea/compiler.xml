@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <resourceExtensions />
+    <wildcardResourcePatterns>
+      <entry name="!?*.java" />
+      <entry name="!?*.form" />
+      <entry name="!?*.class" />
+      <entry name="!?*.groovy" />
+      <entry name="!?*.scala" />
+      <entry name="!?*.flex" />
+      <entry name="!?*.kt" />
+      <entry name="!?*.clj" />
+      <entry name="!?*.aj" />
+    </wildcardResourcePatterns>
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="false">
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Annotation profile for supervisor-model" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="supervisor-model" />
+      </profile>
+      <profile default="false" name="Annotation profile for supervisor-utils" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="supervisor-utils" />
+      </profile>
+      <profile default="false" name="Annotation profile for supervisor-web" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="supervisor-web" />
+      </profile>
+      <profile default="false" name="Annotation profile for supervisor-cluster-sdk" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="supervisor-cluster-sdk" />
+      </profile>
+      <profile default="false" name="Annotation profile for supervisor-agent" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="supervisor-agent" />
+      </profile>
+      <profile default="false" name="Annotation profile for supervisor-common" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="supervisor-common" />
+      </profile>
+      <profile default="false" name="Annotation profile for supervisor-content-detect" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="supervisor-content-detect" />
+      </profile>
+      <profile default="false" name="Annotation profile for supervisor-transcoder" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="supervisor-transcoder" />
+      </profile>
+      <profile default="false" name="Annotation profile for supervisor-tmservice" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="supervisor-tmservice" />
+      </profile>
+      <profile default="false" name="Annotation profile for build-plugin" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="build-plugin" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="build-plugin" target="1.7" />
+      <module name="supervisor" target="1.7" />
+      <module name="supervisor-agent" target="1.7" />
+      <module name="supervisor-cluster-sdk" target="1.7" />
+      <module name="supervisor-common" target="1.7" />
+      <module name="supervisor-content-detect" target="1.7" />
+      <module name="supervisor-model" target="1.7" />
+      <module name="supervisor-tmservice" target="1.7" />
+      <module name="supervisor-transcoder" target="1.7" />
+      <module name="supervisor-utils" target="1.7" />
+      <module name="supervisor-web" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
